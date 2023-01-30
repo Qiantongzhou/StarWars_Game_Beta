@@ -1,0 +1,1161 @@
+Using pre-set license
+Built from '2021.3/staging' branch; Version is '2021.3.9f1 (ad3870b89536) revision 11352176'; Using compiler version '192829333'; Build Type 'Release'
+OS: 'Windows 10  (10.0.19044) 64bit Professional' Language: 'en' Physical Memory: 16278 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Program Files\Unity\Hub\Editor\2021.3.9f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+D:/GitHub/StarWars_Rogue_Three_Beta
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+56571
+Successfully changed project path to: D:/GitHub/StarWars_Rogue_Three_Beta
+D:/GitHub/StarWars_Rogue_Three_Beta
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Refreshing native plugins compatible for Editor in 84.23 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2021.3.9f1 (ad3870b89536)
+[Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2021.3.9f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path D:/GitHub/StarWars_Rogue_Three_Beta/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: AMD Radeon Pro 5300M (ID=0x7340)
+    Vendor:   ATI
+    VRAM:     4056 MB
+    Driver:   26.20.13003.5002
+Initialize mono
+Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2021.3.9f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2021.3.9f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Program Files/Unity/Hub/Editor/2021.3.9f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56636
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Program Files/Unity/Hub/Editor/2021.3.9f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.007820 seconds.
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 82.98 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.694 seconds
+Domain Reload Profiling:
+	ReloadAssembly (695ms)
+		BeginReloadAssembly (92ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (0ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (1ms)
+		EndReloadAssembly (483ms)
+			LoadAssemblies (89ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (109ms)
+			ReleaseScriptCaches (0ms)
+			RebuildScriptCaches (29ms)
+			SetupLoadedEditorAssemblies (290ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (12ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (83ms)
+				BeforeProcessingInitializeOnLoad (1ms)
+				ProcessInitializeOnLoadAttributes (148ms)
+				ProcessInitializeOnLoadMethodAttributes (46ms)
+				AfterProcessingInitializeOnLoad (0ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (0ms)
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.007140 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\StarWars_Rogue_Three_Beta\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\StarWars_Rogue_Three_Beta\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.70 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.158 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1159ms)
+		BeginReloadAssembly (113ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (20ms)
+		EndReloadAssembly (926ms)
+			LoadAssemblies (89ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (333ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (51ms)
+			SetupLoadedEditorAssemblies (407ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (6ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (84ms)
+				ProcessInitializeOnLoadAttributes (278ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+database is locked
+database is locked
+database is locked
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.12 seconds
+Refreshing native plugins compatible for Editor in 0.70 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3381 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 27 unused Assets / (112.3 KB). Loaded Objects now: 3844.
+Memory consumption went from 194.2 MB to 194.1 MB.
+Total: 3.872500 ms (FindLiveObjects: 0.331400 ms CreateObjectMapping: 0.213500 ms MarkObjects: 3.199800 ms  DeleteObjects: 0.126800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Refreshing native plugins compatible for Editor in 5.30 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 20 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (77.1 KB). Loaded Objects now: 3844.
+Memory consumption went from 126.1 MB to 126.1 MB.
+Total: 2.840600 ms (FindLiveObjects: 0.257200 ms CreateObjectMapping: 0.197800 ms MarkObjects: 2.325000 ms  DeleteObjects: 0.060100 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 999901.301417 seconds.
+  path: Assets/SpaceJourney/Scenes/SpaceShip_Shooting&AI/AI_Fight_Map_3D.unity
+  artifactKey: Guid(d3c271dba65088f43839b53815f138e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Scenes/SpaceShip_Shooting&AI/AI_Fight_Map_3D.unity using Guid(d3c271dba65088f43839b53815f138e8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f5997a70e15e79c951d4018acf0d041d') in 0.006897 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008204 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\StarWars_Rogue_Three_Beta\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\StarWars_Rogue_Three_Beta\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.88 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.163 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1164ms)
+		BeginReloadAssembly (136ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (923ms)
+			LoadAssemblies (92ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (255ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (43ms)
+			SetupLoadedEditorAssemblies (482ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (68ms)
+				ProcessInitializeOnLoadAttributes (332ms)
+				ProcessInitializeOnLoadMethodAttributes (50ms)
+				AfterProcessingInitializeOnLoad (17ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3368 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (80.7 KB). Loaded Objects now: 3847.
+Memory consumption went from 193.5 MB to 193.4 MB.
+Total: 3.404300 ms (FindLiveObjects: 0.314500 ms CreateObjectMapping: 0.268400 ms MarkObjects: 2.726000 ms  DeleteObjects: 0.094300 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 328.729549 seconds.
+  path: Assets/Scenes 1
+  artifactKey: Guid(b1f3b0498a5482f4c857c156299c8ea4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes 1 using Guid(b1f3b0498a5482f4c857c156299c8ea4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ddf17122c73259a7be608fc01cdafdd') in 0.015749 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.849648 seconds.
+  path: Assets
+  artifactKey: Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets using Guid(00000000000000001000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '79842766b460edbeab6a34051e857a80') in 0.005447 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 21.307361 seconds.
+  path: Assets/SpaceJourney/Scenes
+  artifactKey: Guid(23ec65ee5a7a5204089327a4bc81d051) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Scenes using Guid(23ec65ee5a7a5204089327a4bc81d051) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6a68874b48e4aca901d13875d561e90e') in 0.006269 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.311266 seconds.
+  path: Assets/SpaceJourney/Scenes/SpaceShip_Shooting&AI/AI_Fight_Map_2D.unity
+  artifactKey: Guid(a0226f74a8066434390da4f252ea920c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Scenes/SpaceShip_Shooting&AI/AI_Fight_Map_2D.unity using Guid(a0226f74a8066434390da4f252ea920c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a14f1df3d36d90ac55d423575c039326') in 0.007578 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007437 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\StarWars_Rogue_Three_Beta\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\StarWars_Rogue_Three_Beta\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.175 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1176ms)
+		BeginReloadAssembly (148ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (38ms)
+		EndReloadAssembly (927ms)
+			LoadAssemblies (97ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (256ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (494ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (63ms)
+				ProcessInitializeOnLoadAttributes (354ms)
+				ProcessInitializeOnLoadMethodAttributes (50ms)
+				AfterProcessingInitializeOnLoad (14ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.87 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3368 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (80.7 KB). Loaded Objects now: 3850.
+Memory consumption went from 193.5 MB to 193.4 MB.
+Total: 4.068200 ms (FindLiveObjects: 0.280300 ms CreateObjectMapping: 0.240100 ms MarkObjects: 3.353900 ms  DeleteObjects: 0.193000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008195 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\StarWars_Rogue_Three_Beta\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\StarWars_Rogue_Three_Beta\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 1.94 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.302 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1302ms)
+		BeginReloadAssembly (135ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (35ms)
+		EndReloadAssembly (1066ms)
+			LoadAssemblies (99ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (368ms)
+			ReleaseScriptCaches (2ms)
+			RebuildScriptCaches (54ms)
+			SetupLoadedEditorAssemblies (474ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (18ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (2ms)
+				BeforeProcessingInitializeOnLoad (95ms)
+				ProcessInitializeOnLoadAttributes (309ms)
+				ProcessInitializeOnLoadMethodAttributes (38ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (9ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.80 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3368 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (80.6 KB). Loaded Objects now: 3853.
+Memory consumption went from 193.5 MB to 193.4 MB.
+Total: 4.874100 ms (FindLiveObjects: 1.636900 ms CreateObjectMapping: 0.241300 ms MarkObjects: 2.902100 ms  DeleteObjects: 0.092700 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007759 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\StarWars_Rogue_Three_Beta\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\StarWars_Rogue_Three_Beta\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.344 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1345ms)
+		BeginReloadAssembly (139ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (1105ms)
+			LoadAssemblies (90ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (392ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (67ms)
+			SetupLoadedEditorAssemblies (471ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (20ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (92ms)
+				ProcessInitializeOnLoadAttributes (305ms)
+				ProcessInitializeOnLoadMethodAttributes (39ms)
+				AfterProcessingInitializeOnLoad (12ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.75 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3368 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (80.7 KB). Loaded Objects now: 3856.
+Memory consumption went from 193.5 MB to 193.4 MB.
+Total: 3.263900 ms (FindLiveObjects: 0.255300 ms CreateObjectMapping: 0.169600 ms MarkObjects: 2.645400 ms  DeleteObjects: 0.192500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 303.504765 seconds.
+  path: Assets/SpaceJourney/Scenes/ElementsShowcase
+  artifactKey: Guid(7cd8e4ab931d59c4ea13fadd02fde34d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Scenes/ElementsShowcase using Guid(7cd8e4ab931d59c4ea13fadd02fde34d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e5f9129e734de4e8ddfa86840e2d219b') in 0.011440 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.977862 seconds.
+  path: Assets/SpaceJourney/Scenes/ElementsShowcase/Planets.unity
+  artifactKey: Guid(ff0ac148ed1b00c42bf77333981cdfba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Scenes/ElementsShowcase/Planets.unity using Guid(ff0ac148ed1b00c42bf77333981cdfba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27b884afd6731224a525902f1537a9e9') in 0.006416 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.114905 seconds.
+  path: Assets/SpaceJourney/Scenes/ElementsShowcase/Asteroids&Particles.unity
+  artifactKey: Guid(3451ebe0f867b5249acd42ba5a422d65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Scenes/ElementsShowcase/Asteroids&Particles.unity using Guid(3451ebe0f867b5249acd42ba5a422d65) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6ae7e5a1e9fa513fd828c3fc28ccf317') in 0.010054 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.329648 seconds.
+  path: Assets/SpaceJourney/Scenes/ElementsShowcase/ScifiElements.unity
+  artifactKey: Guid(4bfb2525b17a4da4a974d4ac70fbd77a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Scenes/ElementsShowcase/ScifiElements.unity using Guid(4bfb2525b17a4da4a974d4ac70fbd77a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea659c388e8b4d91c8fbdc48da452818') in 0.008343 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.796463 seconds.
+  path: Assets/SpaceJourney/Scenes/ElementsShowcase/ScifiElementsFlyBy.unity
+  artifactKey: Guid(020806ab677eda94bbc28be8fc070b51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Scenes/ElementsShowcase/ScifiElementsFlyBy.unity using Guid(020806ab677eda94bbc28be8fc070b51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01ca698116927b500718098313db88c0') in 0.010362 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.881594 seconds.
+  path: Assets/SpaceJourney/Scenes/ElementsShowcase/Ships.unity
+  artifactKey: Guid(b06a109b1e4de194d9aaebffdbd29eb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Scenes/ElementsShowcase/Ships.unity using Guid(b06a109b1e4de194d9aaebffdbd29eb7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0408429a8425a94d08695805a1e1f520') in 0.005762 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 28.154982 seconds.
+  path: Assets/SpaceJourney/Animations/Camera
+  artifactKey: Guid(41d3119cb90518d48901b734c65d0430) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Animations/Camera using Guid(41d3119cb90518d48901b734c65d0430) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '39fa85f976a3f1c60a9ce04e8c6e8afb') in 0.007250 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.023205 seconds.
+  path: Assets/SpaceJourney/Animations/Cutscenes
+  artifactKey: Guid(c765be6bf44458a48b6c55842b570643) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Animations/Cutscenes using Guid(c765be6bf44458a48b6c55842b570643) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '01c4ea0cacf34a20500195cea33d3b8e') in 0.008833 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.283995 seconds.
+  path: Assets/SpaceJourney/Animations/Cutscenes/2
+  artifactKey: Guid(58eae93e55e08c14f8aa1df5bb55a514) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Animations/Cutscenes/2 using Guid(58eae93e55e08c14f8aa1df5bb55a514) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '09b4719e6e8654bb90420095475eceea') in 0.010904 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.491080 seconds.
+  path: Assets/SpaceJourney/Elements
+  artifactKey: Guid(d5cadeac7e7b05d42b58b3ae34db53aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements using Guid(d5cadeac7e7b05d42b58b3ae34db53aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b063634d25a7d7c9002f2e3111e04a3') in 0.006498 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.737554 seconds.
+  path: Assets/SpaceJourney/Elements/Ships
+  artifactKey: Guid(66fe470e38faf214e971a4bd64032bd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/Ships using Guid(66fe470e38faf214e971a4bd64032bd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2eb59ca0dd130cd2db498bc215e3d679') in 0.008962 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.076002 seconds.
+  path: Assets/SpaceJourney/Elements/Ships/Models
+  artifactKey: Guid(ce08a548d6961324081ededb9301ae4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/Ships/Models using Guid(ce08a548d6961324081ededb9301ae4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e4b898a1c59bd05df76eabd408927407') in 0.006860 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.055191 seconds.
+  path: Assets/SpaceJourney/Elements/Ships/Models/Ship_1.FBX
+  artifactKey: Guid(cc2a9593af8b4484c92c0d9fdd3de6bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/Ships/Models/Ship_1.FBX using Guid(cc2a9593af8b4484c92c0d9fdd3de6bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85d681e404b90030969234dbc981676f') in 0.315441 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/SpaceJourney/Elements/Ships/Models/Ship_5.FBX
+  artifactKey: Guid(34c3d9e15bcb29d49a232ef8ba06cbc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/Ships/Models/Ship_5.FBX using Guid(34c3d9e15bcb29d49a232ef8ba06cbc1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef48505642630622c2f3c8f53551f52a') in 0.051290 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 4.096850 seconds.
+  path: Assets/SpaceJourney/Elements/CustomMaterials
+  artifactKey: Guid(f3b56dcc9ff068e4fa2f6688bb38b5a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/CustomMaterials using Guid(f3b56dcc9ff068e4fa2f6688bb38b5a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f29a1eae9364e22a437378d6ee9d6fa') in 0.006449 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.686640 seconds.
+  path: Assets/SpaceJourney/Plugins
+  artifactKey: Guid(5eb76f38a8c43a3419a0c0d5850c4fc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Plugins using Guid(5eb76f38a8c43a3419a0c0d5850c4fc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '28efa4a1f8b19f717ad944d4f5034303') in 0.005196 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.880332 seconds.
+  path: Assets/SpaceJourney/Plugins/Space Ship
+  artifactKey: Guid(604695d3d1261c1478fa581523f7d90b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Plugins/Space Ship using Guid(604695d3d1261c1478fa581523f7d90b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb87116e33e1d06c0a5ac5b9d19ccaa8') in 0.005468 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.650054 seconds.
+  path: Assets/SpaceJourney/Plugins/Space Ship/AsteroidBehaviour.cs
+  artifactKey: Guid(b699ddd1f7defa440946cd6feb5ce44e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Plugins/Space Ship/AsteroidBehaviour.cs using Guid(b699ddd1f7defa440946cd6feb5ce44e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'df881d839e334844d2be459142f8878b') in 0.012224 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 7.706566 seconds.
+  path: Assets/SpaceJourney/Plugins/Space Ship/CustomCursor.cs
+  artifactKey: Guid(7b40f3efc5c0e3242ae898e44e7d16e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Plugins/Space Ship/CustomCursor.cs using Guid(7b40f3efc5c0e3242ae898e44e7d16e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4043cf568b54e4c479c3038a80dd1ed7') in 0.005359 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.534080 seconds.
+  path: Assets/SpaceJourney/Plugins/Space Ship/Crosshair.cs
+  artifactKey: Guid(4d5fcf85aedef6d4aa2ebbe86507f517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Plugins/Space Ship/Crosshair.cs using Guid(4d5fcf85aedef6d4aa2ebbe86507f517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '310e33113d83df04c0fa29da91e7b679') in 0.007023 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.095367 seconds.
+  path: Assets/SpaceJourney/Plugins/Space Ship/BulletScript.cs
+  artifactKey: Guid(dadbbea55fc368645ac476001e46bf35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Plugins/Space Ship/BulletScript.cs using Guid(dadbbea55fc368645ac476001e46bf35) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0aa5ef176d71d9d42097b9c7ad9e82f') in 0.005905 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 34.359271 seconds.
+  path: Assets/SpaceJourney/Plugins/Space Ship/ParticleFollow.cs
+  artifactKey: Guid(b8ddb4b275a9600469f389292dc6e1ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Plugins/Space Ship/ParticleFollow.cs using Guid(b8ddb4b275a9600469f389292dc6e1ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '743dc24f9bec729f936f1fd3e17c7797') in 0.009059 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.709910 seconds.
+  path: Assets/SpaceJourney/Plugins/Space Ship/AsteroidSpawner.cs
+  artifactKey: Guid(0fa65294ea68abf4f9d515938d6584aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Plugins/Space Ship/AsteroidSpawner.cs using Guid(0fa65294ea68abf4f9d515938d6584aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef28231e64fa88bab0984bb1076c6ced') in 0.006669 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.406312 seconds.
+  path: Assets/SpaceJourney/Plugins/Space Ship/EnginePlasma.cs
+  artifactKey: Guid(0e19432c81193fb4fb1c2c0237595fd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Plugins/Space Ship/EnginePlasma.cs using Guid(0e19432c81193fb4fb1c2c0237595fd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b46deebcb7ee16c0817f2c21871320d2') in 0.005601 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.467262 seconds.
+  path: Assets/SpaceJourney/Plugins/Space Ship/RocketScript.cs
+  artifactKey: Guid(294c0eccfcdf4004db3c5e1ed588cadb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Plugins/Space Ship/RocketScript.cs using Guid(294c0eccfcdf4004db3c5e1ed588cadb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3386dad06bd24d591a3e2db9daa83497') in 0.006154 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 5.170352 seconds.
+  path: Assets/SpaceJourney/Plugins/Space Ship/UIcoroutines.cs
+  artifactKey: Guid(8b7d03ea106178c4a977465d03dac914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Plugins/Space Ship/UIcoroutines.cs using Guid(8b7d03ea106178c4a977465d03dac914) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dba166c03e01c06256bad68fc958fed8') in 0.005690 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 9.606762 seconds.
+  path: Assets/SpaceJourney/Plugins/Space Ship/DestructionScript.cs
+  artifactKey: Guid(f40dbfb757f58ba469f724c763102804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Plugins/Space Ship/DestructionScript.cs using Guid(f40dbfb757f58ba469f724c763102804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b31073ad49733d977bc787cd04f1df2c') in 0.006973 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 17.483683 seconds.
+  path: Assets/SpaceJourney/_InputManager/InoutManagerSettings.txt
+  artifactKey: Guid(df5c03b7d66ebf84da1699de03178dfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/_InputManager/InoutManagerSettings.txt using Guid(df5c03b7d66ebf84da1699de03178dfe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0dd9b541d4775a6821b7f5f81496677') in 0.014041 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.009229 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\StarWars_Rogue_Three_Beta\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\StarWars_Rogue_Three_Beta\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.179 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1180ms)
+		BeginReloadAssembly (149ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (41ms)
+		EndReloadAssembly (918ms)
+			LoadAssemblies (89ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (261ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (37ms)
+			SetupLoadedEditorAssemblies (470ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (64ms)
+				ProcessInitializeOnLoadAttributes (319ms)
+				ProcessInitializeOnLoadMethodAttributes (54ms)
+				AfterProcessingInitializeOnLoad (16ms)
+				EditorAssembliesLoaded (2ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (11ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.75 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3368 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (80.8 KB). Loaded Objects now: 3870.
+Memory consumption went from 198.0 MB to 197.9 MB.
+Total: 4.196000 ms (FindLiveObjects: 0.284300 ms CreateObjectMapping: 0.203100 ms MarkObjects: 3.615200 ms  DeleteObjects: 0.092400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007041 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\StarWars_Rogue_Three_Beta\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\StarWars_Rogue_Three_Beta\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.62 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.264 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1265ms)
+		BeginReloadAssembly (150ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (35ms)
+		EndReloadAssembly (991ms)
+			LoadAssemblies (108ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (303ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (498ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (81ms)
+				ProcessInitializeOnLoadAttributes (349ms)
+				ProcessInitializeOnLoadMethodAttributes (43ms)
+				AfterProcessingInitializeOnLoad (11ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (7ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 3.96 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3368 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (80.5 KB). Loaded Objects now: 3873.
+Memory consumption went from 198.1 MB to 198.0 MB.
+Total: 3.803400 ms (FindLiveObjects: 0.346900 ms CreateObjectMapping: 0.289800 ms MarkObjects: 3.060900 ms  DeleteObjects: 0.105000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.010532 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\StarWars_Rogue_Three_Beta\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\StarWars_Rogue_Three_Beta\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.244 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1245ms)
+		BeginReloadAssembly (133ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (986ms)
+			LoadAssemblies (96ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (281ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (41ms)
+			SetupLoadedEditorAssemblies (501ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (63ms)
+				ProcessInitializeOnLoadAttributes (364ms)
+				ProcessInitializeOnLoadMethodAttributes (45ms)
+				AfterProcessingInitializeOnLoad (15ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (10ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 2.09 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3368 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (80.7 KB). Loaded Objects now: 3876.
+Memory consumption went from 198.1 MB to 198.0 MB.
+Total: 3.463700 ms (FindLiveObjects: 0.302000 ms CreateObjectMapping: 0.166300 ms MarkObjects: 2.897300 ms  DeleteObjects: 0.097000 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 399.450259 seconds.
+  path: Assets/Scenes/TestScene.unity
+  artifactKey: Guid(a2d49395bf5412c4ea62ec346aeba1b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scenes/TestScene.unity using Guid(a2d49395bf5412c4ea62ec346aeba1b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ece2cf4c4b155f8bfbd5aac8c7d3cd9c') in 0.010891 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 40.078815 seconds.
+  path: Assets/Script
+  artifactKey: Guid(44ccb54d27775884f82ee380d1b51ba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Script using Guid(44ccb54d27775884f82ee380d1b51ba2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8c20ecf97d7620513d200bc50930ac21') in 0.005351 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.512420 seconds.
+  path: Assets/SpaceJourney/Elements/CustomMaterials/GroundMaterial.mat
+  artifactKey: Guid(8d35a9d91a800044cb9176e2708635d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/CustomMaterials/GroundMaterial.mat using Guid(8d35a9d91a800044cb9176e2708635d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '235bca23980780a904fbb38ce61e2932') in 0.084297 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.289642 seconds.
+  path: Assets/SpaceJourney/Elements/beffio Asset Extras
+  artifactKey: Guid(982a73f844f86f14baf7f3ec9c534219) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/beffio Asset Extras using Guid(982a73f844f86f14baf7f3ec9c534219) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '732cd6cb5dcf830ef8f7e1e35ed4b00e') in 0.005811 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 1.112669 seconds.
+  path: Assets/SpaceJourney/Elements/beffio Asset Extras/UI
+  artifactKey: Guid(36ca03b30d623e3409588b3d9096140e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/beffio Asset Extras/UI using Guid(36ca03b30d623e3409588b3d9096140e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '341cf5a0ffd1748a1bd8c8ad40fad5d8') in 0.006168 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.052674 seconds.
+  path: Assets/SpaceJourney/Elements/beffio Asset Extras/UI/Crosshair.png
+  artifactKey: Guid(60aa3e566d36ac241bbe5371226979aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/beffio Asset Extras/UI/Crosshair.png using Guid(60aa3e566d36ac241bbe5371226979aa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '23d1e606d5d83f2e26cd46f0d1483d6c') in 0.018717 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/SpaceJourney/Elements/beffio Asset Extras/UI/Crosshair3.png
+  artifactKey: Guid(117e9e7492c6b2540b5a0a3818c3d9f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/beffio Asset Extras/UI/Crosshair3.png using Guid(117e9e7492c6b2540b5a0a3818c3d9f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b1e61dc8e8061363623ade82b344957') in 0.021702 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/SpaceJourney/Elements/beffio Asset Extras/UI/testcursor.png
+  artifactKey: Guid(62a4aad5b170206439010c5b7fd258b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/beffio Asset Extras/UI/testcursor.png using Guid(62a4aad5b170206439010c5b7fd258b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '023209aa64824e47b8fb8da368340753') in 0.026102 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 2.214211 seconds.
+  path: Assets/SpaceJourney/Elements/Asteroids
+  artifactKey: Guid(11529e3ad1cd67347a7e5afe3db70def) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/Asteroids using Guid(11529e3ad1cd67347a7e5afe3db70def) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '55a5b439681b7c29a38e743a329f1656') in 0.006786 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.044141 seconds.
+  path: Assets/SpaceJourney/Elements/Asteroids/Asteroid_1.fbx
+  artifactKey: Guid(bd4d6f331bd94db44aa3aed75b65e09d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/Asteroids/Asteroid_1.fbx using Guid(bd4d6f331bd94db44aa3aed75b65e09d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b953928764ccb01c6a61b07afaac66d6') in 0.043840 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000048 seconds.
+  path: Assets/SpaceJourney/Elements/Asteroids/Asteroid_9.fbx
+  artifactKey: Guid(7a78e2390720e314f8be81b329e0e3c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/Asteroids/Asteroid_9.fbx using Guid(7a78e2390720e314f8be81b329e0e3c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b445b326fc17fae1ef55f0b8a816a922') in 0.018529 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/SpaceJourney/Elements/Asteroids/Asteroid_11.fbx
+  artifactKey: Guid(d447a9ceccdc94f439832b0a08de4cb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/Asteroids/Asteroid_11.fbx using Guid(d447a9ceccdc94f439832b0a08de4cb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '351deaa80489e3d9dadcca7389108ee0') in 0.016383 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/SpaceJourney/Elements/Asteroids/Asteroid_12.FBX
+  artifactKey: Guid(7304af875ee41834eb3b4db55a913bfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/Asteroids/Asteroid_12.FBX using Guid(7304af875ee41834eb3b4db55a913bfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6220d2d8167c43a9b75a50da5d1a4dab') in 0.026772 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/SpaceJourney/Elements/Asteroids/Asteroid_5.fbx
+  artifactKey: Guid(e4c1a8f16f4090046b6736874e02a379) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/Asteroids/Asteroid_5.fbx using Guid(e4c1a8f16f4090046b6736874e02a379) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c3509a7c896e55d348295a1e7722941b') in 0.022657 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/SpaceJourney/Elements/Asteroids/Asteroid_7.fbx
+  artifactKey: Guid(eeec89ea947048f4b9e36206231f41d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/Asteroids/Asteroid_7.fbx using Guid(eeec89ea947048f4b9e36206231f41d3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c7c5fa1a6bc8c63da8632be9e8242b16') in 0.018570 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/SpaceJourney/Elements/Asteroids/Asteroid_3.fbx
+  artifactKey: Guid(5dfd8fd630e3cc146a8af0d6ebbcb522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/Asteroids/Asteroid_3.fbx using Guid(5dfd8fd630e3cc146a8af0d6ebbcb522) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7aec633103c70054c74bc324f91b121') in 0.022558 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/SpaceJourney/Elements/Asteroids/Asteroid_10.fbx
+  artifactKey: Guid(cde5e2450d3f1874dbfacd5cd9b92f9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/Asteroids/Asteroid_10.fbx using Guid(cde5e2450d3f1874dbfacd5cd9b92f9e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '96fef56e7e5bed17d3857d3bbc1ce8ab') in 0.018777 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/SpaceJourney/Elements/Asteroids/Scifi_Asteroid_1.fbx
+  artifactKey: Guid(581ac62a99c496b46a8b563b9c0444ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/Asteroids/Scifi_Asteroid_1.fbx using Guid(581ac62a99c496b46a8b563b9c0444ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eec909b7591b6fcfa241073dbe6d7c6d') in 0.017965 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/SpaceJourney/Elements/Asteroids/Scifi_Asteroid_3.fbx
+  artifactKey: Guid(fcaf56d60121aed48800f5f71a7e9c57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/Asteroids/Scifi_Asteroid_3.fbx using Guid(fcaf56d60121aed48800f5f71a7e9c57) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f52213eaab02ef9ec7b7181fd75f0ff7') in 0.024927 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 14.562108 seconds.
+  path: Assets/SpaceJourney/Prefabs/Particles/AsteroidFields/AsteroidVolume_1.prefab
+  artifactKey: Guid(0a933e5ee72052642958a57a0a99d33b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Prefabs/Particles/AsteroidFields/AsteroidVolume_1.prefab using Guid(0a933e5ee72052642958a57a0a99d33b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec33100ad8f534b770e05b8c86023aaf') in 0.022029 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/SpaceJourney/Prefabs/Particles/AsteroidFields/AsteroidVolumeBig.prefab
+  artifactKey: Guid(24ae66199e6182c409f1cf0b2890461a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Prefabs/Particles/AsteroidFields/AsteroidVolumeBig.prefab using Guid(24ae66199e6182c409f1cf0b2890461a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '56d1431bdcbc421e83d3fb1eb13b117d') in 0.017248 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/SpaceJourney/Prefabs/Particles/AsteroidFields/AsteroidVolume_5.prefab
+  artifactKey: Guid(ed3087d0da6578f4caa6436c4fafb751) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Prefabs/Particles/AsteroidFields/AsteroidVolume_5.prefab using Guid(ed3087d0da6578f4caa6436c4fafb751) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1dec7ec9544fc66d4f0220837709400') in 0.022395 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/SpaceJourney/Prefabs/Particles/AsteroidFields/AsteroidVolume_7.prefab
+  artifactKey: Guid(1617a2b7d41e8014baf45283ceef53c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Prefabs/Particles/AsteroidFields/AsteroidVolume_7.prefab using Guid(1617a2b7d41e8014baf45283ceef53c5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '30121ab94be7f9518657136981b4f89f') in 0.018059 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/SpaceJourney/Prefabs/Particles/AsteroidFields/AsteroidVolume_3.prefab
+  artifactKey: Guid(8a1ad658e14c28a4aafd816eefcda74f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Prefabs/Particles/AsteroidFields/AsteroidVolume_3.prefab using Guid(8a1ad658e14c28a4aafd816eefcda74f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87452bb4661e587794eb7233fdafe8a8') in 0.015769 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/SpaceJourney/Prefabs/Particles/AsteroidFields/AsteroidVolumeSmall.prefab
+  artifactKey: Guid(41a8e247ba4c4b841993c7209ef6b51f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Prefabs/Particles/AsteroidFields/AsteroidVolumeSmall.prefab using Guid(41a8e247ba4c4b841993c7209ef6b51f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1863de7e02b663e88f513ffaac35bb5b') in 0.014469 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 3.305686 seconds.
+  path: Assets/SpaceJourney/Prefabs/Particles/EffectExamples/Magic Effects/Prefabs/IceLance.prefab
+  artifactKey: Guid(1a1c02facd51d87458dcaa3a761e2c03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Prefabs/Particles/EffectExamples/Magic Effects/Prefabs/IceLance.prefab using Guid(1a1c02facd51d87458dcaa3a761e2c03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f7c0b8fa0df1a3aa0b98550e2e3bb419') in 0.316703 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 46.672941 seconds.
+  path: Assets/SpaceJourney/Elements/Particles/Materials/EngineParticles.mat
+  artifactKey: Guid(f1832836d55710b4d9d3dd21542f5852) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/Particles/Materials/EngineParticles.mat using Guid(f1832836d55710b4d9d3dd21542f5852) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cfbfc7b99de8aac84ab7b9881e62eed1') in 0.031383 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/SpaceJourney/Elements/Effects/Flares/Textures/EnginePlasmaRed.psd
+  artifactKey: Guid(d5e0d960a99a52242b15bd73f8e8bdc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/Effects/Flares/Textures/EnginePlasmaRed.psd using Guid(d5e0d960a99a52242b15bd73f8e8bdc2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cac6991c46b13f7ff8abbe8491571185') in 0.022695 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/SpaceJourney/Elements/Ships/Models/Engines/Ship_5_Engines.FBX
+  artifactKey: Guid(0c05e8aebc22ca34c863e1352964ffda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/Ships/Models/Engines/Ship_5_Engines.FBX using Guid(0c05e8aebc22ca34c863e1352964ffda) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '895005016f67b14f6ea28e310db19210') in 0.041174 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/SpaceJourney/Elements/Effects/Flares/Textures/EnginePlasma_1Red.psd
+  artifactKey: Guid(bdf7ee904ac2887449144ff63d0f4d23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/Effects/Flares/Textures/EnginePlasma_1Red.psd using Guid(bdf7ee904ac2887449144ff63d0f4d23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd77eabbf98e0aaa57d1f791f9830388b') in 0.011609 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/SpaceJourney/Elements/Ships/Materials/Ship_1_Engines.mat
+  artifactKey: Guid(323c8f75722aa554fa9d94ed33e3066d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/Ships/Materials/Ship_1_Engines.mat using Guid(323c8f75722aa554fa9d94ed33e3066d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9f9bcf45fdd66dc5f39987a13ee281a5') in 2.253547 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 16.627246 seconds.
+  path: Assets/SpaceJourney/Prefabs/Particles/EffectExamples/Magic Effects/Materials/IceTrail.mat
+  artifactKey: Guid(d4c406b5d941319458ddccf4b6f76be3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Prefabs/Particles/EffectExamples/Magic Effects/Materials/IceTrail.mat using Guid(d4c406b5d941319458ddccf4b6f76be3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b0cffe7001aab7f62c8c9a37712c2bc6') in 0.016342 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/SpaceJourney/Prefabs/Projectiles & Enemies/Enemies/Ship_1_AI.prefab
+  artifactKey: Guid(bd96e4e9d82995a4cb006ced5eb303f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Prefabs/Projectiles & Enemies/Enemies/Ship_1_AI.prefab using Guid(bd96e4e9d82995a4cb006ced5eb303f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b6e6963178482f093046ee4c066620bf') in 0.337285 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/SpaceJourney/Prefabs/Projectiles & Enemies/Enemies/Ship_5_AI.prefab
+  artifactKey: Guid(52e64cdd649761a4b957696fe715ac93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Prefabs/Projectiles & Enemies/Enemies/Ship_5_AI.prefab using Guid(52e64cdd649761a4b957696fe715ac93) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba4c59953b4e89fc8fcf14b0acdf9059') in 0.116752 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/SpaceJourney/Elements/Planets/Models/SunDetailed.FBX
+  artifactKey: Guid(ff19e0a204fcdd64cad1b2aa4a328d0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Elements/Planets/Models/SunDetailed.FBX using Guid(ff19e0a204fcdd64cad1b2aa4a328d0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bbf6d18a2ddbcf6b19278d9a5367b4e') in 0.029576 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007403 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\StarWars_Rogue_Three_Beta\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\StarWars_Rogue_Three_Beta\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.61 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.981 seconds
+Domain Reload Profiling:
+	ReloadAssembly (981ms)
+		BeginReloadAssembly (131ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (36ms)
+		EndReloadAssembly (754ms)
+			LoadAssemblies (89ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (264ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (38ms)
+			SetupLoadedEditorAssemblies (326ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (63ms)
+				ProcessInitializeOnLoadAttributes (212ms)
+				ProcessInitializeOnLoadMethodAttributes (29ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.88 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3368 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 22 unused Assets / (81.6 KB). Loaded Objects now: 3919.
+Memory consumption went from 198.5 MB to 198.4 MB.
+Total: 3.142800 ms (FindLiveObjects: 0.245500 ms CreateObjectMapping: 0.145600 ms MarkObjects: 2.649100 ms  DeleteObjects: 0.101800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 39.340065 seconds.
+  path: Assets/SpaceJourney/Prefabs/Ships/Controller Plugin/Ship_4_Controller.prefab
+  artifactKey: Guid(176b15c1ea178e44da1249ad8139dee7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Prefabs/Ships/Controller Plugin/Ship_4_Controller.prefab using Guid(176b15c1ea178e44da1249ad8139dee7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '66fe23597854667e3859827841cd05e0') in 0.229167 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/SpaceJourney/Prefabs/Ships/Controller Plugin/Ship_1_Controller.prefab
+  artifactKey: Guid(34a9267cc7acc7d44b97789354cba91f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/SpaceJourney/Prefabs/Ships/Controller Plugin/Ship_1_Controller.prefab using Guid(34a9267cc7acc7d44b97789354cba91f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c604fed721237a691310777b89aa5b1') in 0.058809 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.008425 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\StarWars_Rogue_Three_Beta\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\StarWars_Rogue_Three_Beta\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.971 seconds
+Domain Reload Profiling:
+	ReloadAssembly (971ms)
+		BeginReloadAssembly (130ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (5ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (35ms)
+		EndReloadAssembly (745ms)
+			LoadAssemblies (87ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (251ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (39ms)
+			SetupLoadedEditorAssemblies (333ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (63ms)
+				ProcessInitializeOnLoadAttributes (221ms)
+				ProcessInitializeOnLoadMethodAttributes (27ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.84 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3368 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 22 unused Assets / (81.6 KB). Loaded Objects now: 3922.
+Memory consumption went from 198.7 MB to 198.6 MB.
+Total: 2.943600 ms (FindLiveObjects: 0.251000 ms CreateObjectMapping: 0.149500 ms MarkObjects: 2.440800 ms  DeleteObjects: 0.101500 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.007077 seconds.
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\StarWars_Rogue_Three_Beta\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\YamlDotNet\Unity.VisualScripting.YamlDotNet.dll
+Symbol file LoadedFromMemory doesn't match image D:\GitHub\StarWars_Rogue_Three_Beta\Library\PackageCache\com.unity.visualscripting@1.7.8\Editor\VisualScripting.Core\Dependencies\DotNetZip\Unity.VisualScripting.IonicZip.dll
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.977 seconds
+Domain Reload Profiling:
+	ReloadAssembly (978ms)
+		BeginReloadAssembly (133ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (33ms)
+		EndReloadAssembly (747ms)
+			LoadAssemblies (93ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (250ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (40ms)
+			SetupLoadedEditorAssemblies (332ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (13ms)
+				SetLoadedEditorAssemblies (0ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (65ms)
+				ProcessInitializeOnLoadAttributes (214ms)
+				ProcessInitializeOnLoadMethodAttributes (30ms)
+				AfterProcessingInitializeOnLoad (9ms)
+				EditorAssembliesLoaded (0ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (6ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 1.87 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 3368 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 20 unused Assets / (80.8 KB). Loaded Objects now: 3925.
+Memory consumption went from 198.7 MB to 198.6 MB.
+Total: 3.042700 ms (FindLiveObjects: 0.249100 ms CreateObjectMapping: 0.145900 ms MarkObjects: 2.563200 ms  DeleteObjects: 0.083800 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 

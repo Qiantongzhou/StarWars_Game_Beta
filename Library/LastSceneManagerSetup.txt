@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/SpaceJourney/Scenes/ShootingScene.unity
+- path: Assets/Scenes/AI_Fight_Map_3D.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
