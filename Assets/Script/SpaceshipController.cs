@@ -49,7 +49,7 @@ public sealed class SpaceshipController : MonoBehaviour
 		RotationSmooth = 5.0f,
 		OnRollCompensationFactor = 0.5f,
 		LookAtPointOffset = new CameraLookAtPointOffsetSettings
-		{
+		{ 
 			OnIdle = new Vector2(0.0f, 10.0f),
 			Smooth = new Vector2(30.0f, 30.0f),
 			OnMaxSpeed = new Vector2(20.0f, -20.0f),
