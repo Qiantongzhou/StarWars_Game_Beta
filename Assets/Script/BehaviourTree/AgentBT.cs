@@ -15,6 +15,7 @@ public class AgentBT : MonoBehaviour {
         SequenceNode testSeq = new SequenceNode();
         //testSeq.AddChild(new AstarRandomMoveNode(btAgent));
         testSeq.AddChild(new AstarMove2TargetNode(btAgent));
+        testSeq.AddChild(new TurnTowardsTargetNode(btAgent));
 
         root.AddChild(testSeq);
     }
