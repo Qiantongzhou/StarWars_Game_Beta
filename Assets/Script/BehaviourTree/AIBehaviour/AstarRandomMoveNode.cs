@@ -27,6 +27,10 @@ public class AstarRandomMoveNode : ActionNode {
             SetRandomTarget();
             aStarAgent.Pathfinding(targetPoint.WorldPosition);
         }
+        if (aStarAgent.Status == AStarAgentStatus.Invalid) {
+            SetRandomTarget();
+            aStarAgent.Pathfinding(targetPoint.WorldPosition);
+        }
     }
 
     private void SetRandomTarget() {
