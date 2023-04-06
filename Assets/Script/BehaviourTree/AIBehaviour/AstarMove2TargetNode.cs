@@ -15,7 +15,7 @@ public class AstarMove2TargetNode : ActionNode {
         aStarAgent = btAgent.gameObject.GetComponent<AStarAgent>();
 
         currentTarget = btAgent.target;
-        aStarAgent.Pathfinding(currentTarget.position);
+        aStarAgent.Pathfinding(currentTarget.position, false, false);
     }
 
     public override NodeStatus Execute() {
@@ -28,18 +28,17 @@ public class AstarMove2TargetNode : ActionNode {
         if (timer > clearPathInterval) {
             if(currentTarget.transform.position != btAgent.target.transform.position) {
                 currentTarget = btAgent.target;
-                aStarAgent.Pathfinding(currentTarget.position);
+                aStarAgent.Pathfinding(currentTarget.position, false, false);
             }
             timer = 0f;
         }
-        Debug.Log(aStarAgent.Status);
         if (aStarAgent.Status == AStarAgentStatus.Finished) {
             currentTarget = btAgent.target;
-            aStarAgent.Pathfinding(currentTarget.position);
+            aStarAgent.Pathfinding(currentTarget.position, false, false);
         }
         if (aStarAgent.Status == AStarAgentStatus.Invalid) {
             currentTarget = btAgent.target;
-            aStarAgent.Pathfinding(currentTarget.position);
+            aStarAgent.Pathfinding(currentTarget.position, false, false);
         }
     }
 }

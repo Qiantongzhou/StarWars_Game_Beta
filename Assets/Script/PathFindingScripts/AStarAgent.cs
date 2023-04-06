@@ -35,6 +35,8 @@ public class AStarAgent : MonoBehaviour
     [SerializeField] PathCreator _PathCreatorPrefab;
     [SerializeField] float _CornerSmooth;
 
+    private bool isRotationAbled = true;
+
     private void Awake()
     {
         AssignPriority();
@@ -178,8 +180,9 @@ public class AStarAgent : MonoBehaviour
     }
 
     // a typical A* algorithm, returns AStarAgentStatus
-    public AStarAgentStatus Pathfinding(Vector3 goal,bool supressMovement=false)
+    public AStarAgentStatus Pathfinding(Vector3 goal, bool supressMovement=false, bool isRotationAbled = true)
     {
+        this.isRotationAbled = isRotationAbled;
         _startPosition = transform.position;
         _endPosition = goal;
         _start = WorldManager.Instance.GetClosestPointWorldSpace(transform.position);
@@ -377,12 +380,17 @@ public class AStarAgent : MonoBehaviour
                 if (CurvePath)
                 {
                     transform.position += transform.forward * Time.deltaTime * Speed;
-                    transform.forward = Vector3.Slerp(transform.forward, forwardDirection, Time.deltaTime * TurnSpeed);
+                    if (isRotationAbled) {
+                        transform.forward = Vector3.Slerp(transform.forward, forwardDirection, Time.deltaTime * TurnSpeed);
+                    }
+
                 }
                 else
                 {
                     transform.forward = forwardDirection;
-                    transform.position = Vector3.MoveTowards(transform.position, TotalPath[i].WorldPosition, Time.deltaTime * Speed);
+                    if (isRotationAbled) {
+                        transform.position = Vector3.MoveTowards(transform.position, TotalPath[i].WorldPosition, Time.deltaTime * Speed);
+                    }
                 }
                 l += Time.deltaTime * Speed;
                 yield return new WaitForFixedUpdate();
@@ -417,7 +425,9 @@ public class AStarAgent : MonoBehaviour
             SetPathColor();
             transform.position += transform.forward * Time.deltaTime * Speed;
             Vector3 forwardDirection = (PathCreator.path.GetPointAtDistance(l, EndOfPathInstruction.Stop) - transform.position).normalized;
-            transform.forward = Vector3.Slerp(transform.forward, forwardDirection, Time.deltaTime * TurnSpeed);
+            if (isRotationAbled) {
+                transform.forward = Vector3.Slerp(transform.forward, forwardDirection, Time.deltaTime * TurnSpeed);
+            }
             l += Time.deltaTime * Speed;
             yield return new WaitForFixedUpdate();
         }
