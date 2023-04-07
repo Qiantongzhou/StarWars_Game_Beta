@@ -1,0 +1,32 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
+
+public class FireMissleNode : Node
+{
+    private MSBT msbt;
+    private float lastExecutedTime = 0f;
+    private float executionInterval = 15f;
+    public FireMissleNode(MSBT msbt) {
+        this.msbt = msbt;
+        FireMissle();
+    }
+
+    public override NodeStatus Execute() {
+        if (Time.time - lastExecutedTime > executionInterval) {
+            FireMissle();
+            lastExecutedTime = Time.time;
+        }
+        return NodeStatus.SUCCESS;
+    }
+
+    public void FireMissle() {
+        if (msbt != null) {
+            foreach (Transform child in msbt.missleLauncher) {
+                GameObject missle = MSBT.Instantiate(msbt.misslePrefab, child.position, child.rotation);
+                missle.GetComponent<Missle>().target = msbt.target;
+            }
+        }
+    }
+}

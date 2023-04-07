@@ -13,9 +13,9 @@ public class AgentBT : MonoBehaviour {
         // Build behavior tree
         root = new SelectorNode();
         SequenceNode testSeq = new SequenceNode();
-        //testSeq.AddChild(new AstarRandomMoveNode(btAgent));
-        testSeq.AddChild(new AstarMove2TargetNode(btAgent));
-        testSeq.AddChild(new TurnTowardsTargetNode(btAgent));
+        testSeq.AddChild(new AstarRandomMoveNode(btAgent));
+        //testSeq.AddChild(new AstarMove2TargetNode(btAgent));
+        //testSeq.AddChild(new TurnTowardsTargetNode(btAgent));
 
         root.AddChild(testSeq);
     }
