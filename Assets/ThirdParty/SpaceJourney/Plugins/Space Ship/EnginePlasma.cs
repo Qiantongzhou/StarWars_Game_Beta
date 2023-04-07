@@ -61,12 +61,13 @@ public sealed class EnginePlasma : MonoBehaviour
 		{
 			get
 			{
-				return m_emitter.emissionRate;
+				return m_emitter.emission.rateOverTime.constant;
 			}
 
 			protected set
 			{
-				m_emitter.emissionRate = value;
+				var emission = m_emitter.emission;
+				emission.rateOverTime=value;
 			}
 		}
 
