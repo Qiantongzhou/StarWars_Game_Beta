@@ -10,6 +10,7 @@ public class FireLaserCannonNode : ActionNode {
     private float executionInterval = 5f;
     private ProgressControlV3D laser;
     private bool isFirstExecution = true;
+    private Coroutine fireLaserCannonCoroutine;
     public FireLaserCannonNode(MSBT msbt) {
         this.msbt = msbt;
         laser = msbt.laserNozzle.transform.GetChild(0).GetComponent<ProgressControlV3D>();
@@ -18,10 +19,13 @@ public class FireLaserCannonNode : ActionNode {
     public override NodeStatus Execute() {
         if (isFirstExecution) { 
             isFirstExecution = false;
-            msbt.StartCoroutine(FireLaserCannon(2f));
+            fireLaserCannonCoroutine = msbt.StartCoroutine(FireLaserCannon(2f));
         }
         if (Time.time - lastExecutedTime > executionInterval) {
-            msbt.StartCoroutine(FireLaserCannon(2f));
+            if (fireLaserCannonCoroutine != null) {
+                msbt.StopCoroutine(fireLaserCannonCoroutine);
+            }
+            fireLaserCannonCoroutine = msbt.StartCoroutine(FireLaserCannon(2f));
         }
         return NodeStatus.SUCCESS;
     }
