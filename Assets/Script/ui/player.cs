@@ -50,7 +50,7 @@ public class player : MonoBehaviour
     {
         gamesaving = GameObject.Find("gamesaving").GetComponent<gamesaving>();
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
-        attr = GetComponent<Attributes>();
+        //attr// = GetComponent<Attributes>();
         equipAttr = gameObject.AddComponent<Attributes>();
         skillAttr = gameObject.AddComponent<Attributes>();
         ResultAttr = gameObject.AddComponent<Attributes>();
