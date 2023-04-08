@@ -43,7 +43,7 @@ public class CheckTargetInAreaNode : ConditionNode {
         }
 
         if (closestEnemy != null) {
-            msbt.target = closestEnemy.gameObject.transform;
+            msbt.target = closestEnemy.gameObject.transform.parent.parent;
             if (msbt.debug) {
                 Debug.DrawRay(closestEnemy.gameObject.transform.position, Vector3.up, Color.red, 5f);
             }
