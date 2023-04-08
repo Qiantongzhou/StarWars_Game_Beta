@@ -3,17 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 
-public class FireMissleNode : Node
-{
+public class FireMissleNode : ActionNode {
     private MSBT msbt;
     private float lastExecutedTime = 0f;
     private float executionInterval = 15f;
+    private bool isFirstExecution = true;
     public FireMissleNode(MSBT msbt) {
         this.msbt = msbt;
-        FireMissle();
     }
 
     public override NodeStatus Execute() {
+        if (isFirstExecution) {
+            isFirstExecution = false;
+            FireMissle();
+        }
         if (Time.time - lastExecutedTime > executionInterval) {
             FireMissle();
             lastExecutedTime = Time.time;
