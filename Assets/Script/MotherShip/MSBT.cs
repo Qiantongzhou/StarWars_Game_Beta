@@ -3,30 +3,37 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MSBT : MonoBehaviour {
+    public bool debug;
+
     public Transform target;
     public GameObject misslePrefab;
+    public float turnSpeed;
+    public float defensiveRange;
+    
     private MSBT msbt;
     private SelectorNode root;
-    public Transform[] missleLauncher;
+
+    [HideInInspector] public Transform[] missleLauncher;
+    [HideInInspector] public Transform laserNozzle;
    
     private void Start() {
         msbt = this;
         missleLauncher = new Transform[transform.GetChild(0).childCount];
         foreach (Transform child in transform.GetChild(0)) {
             missleLauncher[child.GetSiblingIndex()] = child;
-            print(child);
         }
-
+        laserNozzle = transform.GetChild(1);
 
 
         // Build behavior tree
         root = new SelectorNode();
-        SequenceNode testSeq = new SequenceNode();
-        //testSeq.AddChild(new CheckTargetInAreaNode(msbt));
-        testSeq.AddChild(new FireMissleNode(msbt));
-        //testSeq.AddChild(new FireLaserCannonNode(msbt));
+        SequenceNode counterAttackSeq = new SequenceNode();
+        counterAttackSeq.AddChild(new CheckTargetInAreaNode(msbt, defensiveRange));
+        counterAttackSeq.AddChild(new FireMissleNode(msbt));
+        counterAttackSeq.AddChild(new TurnTowardNode(msbt));
+        counterAttackSeq.AddChild(new FireLaserCannonNode(msbt));
 
-        root.AddChild(testSeq);
+        root.AddChild(counterAttackSeq);
     }
 
     // Update is called once per frame
