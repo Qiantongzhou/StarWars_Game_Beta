@@ -17,9 +17,9 @@ public enum AStarAgentStatus
 
 public class AStarAgent : MonoBehaviour
 {
-    public float Speed;
-    public float TurnSpeed;
     public bool CurvePath;
+    private float Speed = 1f;
+    private float TurnSpeed = 1f;
     Point _start;
     Point _end;
     Vector3 _startPosition;
@@ -38,11 +38,15 @@ public class AStarAgent : MonoBehaviour
     private void Awake()
     {
         AssignPriority();
-
     }
     private void Start()
     {
         SetStationaryPoint();
+    }
+
+    public void setSpeed(float speed, float turnSpeed) {
+        Speed = speed;
+        TurnSpeed = turnSpeed;
     }
 
     // This code ensures that the AStarAgent components with faster speed have smaller Priority values

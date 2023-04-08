@@ -11,9 +11,6 @@ public class AstarRandomMoveNode : ActionNode {
     // initialize
     public AstarRandomMoveNode(AgentBT btAgent) {
         aStarAgent = btAgent.gameObject.GetComponent<AStarAgent>();
-
-        SetRandomTarget();
-        aStarAgent.Pathfinding(targetPoint.WorldPosition);
     }
 
     // execute

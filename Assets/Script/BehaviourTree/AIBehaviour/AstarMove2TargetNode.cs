@@ -13,9 +13,6 @@ public class AstarMove2TargetNode : ActionNode {
     public AstarMove2TargetNode(AgentBT btAgent) {
         this.btAgent = btAgent;
         aStarAgent = btAgent.gameObject.GetComponent<AStarAgent>();
-
-        currentTarget = btAgent.target;
-        aStarAgent.Pathfinding(currentTarget.position, false, false);
     }
 
     public override NodeStatus Execute() {
