@@ -14,10 +14,11 @@ public class TurnTowardNode : ActionNode {
     public override NodeStatus Execute() {
         Vector3 directionToTarget = msbt.target.position - msbt.laserNozzle.transform.position;
         Vector3 forward = msbt.laserNozzle.transform.forward;
+        float distance = directionToTarget.magnitude;
 
         float angle = Vector3.Angle(directionToTarget, forward);
 
-        if (angle <= 120f) {
+        if (angle <= 120f && distance > 30f) {
             TurnToward();
             Ray ray = new Ray(msbt.laserNozzle.transform.position, msbt.laserNozzle.transform.forward);
             if (Physics.Raycast(ray, out _, Mathf.Infinity, 1 << msbt.target.gameObject.layer)) {
