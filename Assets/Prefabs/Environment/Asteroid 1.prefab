@@ -391,7 +391,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c646e461af6cf4d818a5f85376ec23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 400
+  speed: 1500
   explosionPrefab: {fileID: 2588732529982068703, guid: c956d7cec8ba3c64aabdb0e0403c8e6b, type: 3}
 --- !u!135 &4970789971741299314
 SphereCollider:
@@ -524,7 +524,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 651930328997691192, guid: 0766ad9d1082f594d90205125c1f1d08, type: 3}
       propertyPath: ShapeModule.radius.value
-      value: 0.56
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 651930328997691192, guid: 0766ad9d1082f594d90205125c1f1d08, type: 3}
       propertyPath: ShapeModule.radiusThickness

@@ -16,7 +16,7 @@ public class Portal : MonoBehaviour
     }
     private void LateUpdate()
     {
-        Vector3 portalToPlayer = _ship.position - transform.position;
+        //Vector3 portalToPlayer = _ship.position - transform.position;
         // Teleport ship
         if (playerIsOverlapping)
         {
@@ -25,8 +25,10 @@ public class Portal : MonoBehaviour
 
             _ship.Rotate(Vector3.up, rotationDif);
 
-            Vector3 positonOffset = Quaternion.Euler(0f, rotationDif, 0f) * portalToPlayer;
-            _ship.position = _destination.position + positonOffset;
+            //Vector3 positonOffset = Quaternion.Euler(0f, rotationDif, 0f) * portalToPlayer;
+            //_ship.position = _destination.position + positonOffset;
+            _ship.position = _destination.position;
+
             StartCoroutine(Teleport());
         }
     }

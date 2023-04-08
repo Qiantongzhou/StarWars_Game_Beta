@@ -390,7 +390,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c646e461af6cf4d818a5f85376ec23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 300
+  speed: 1500
   explosionPrefab: {fileID: 2588732529982068703, guid: c956d7cec8ba3c64aabdb0e0403c8e6b, type: 3}
 --- !u!136 &1262632809019754143
 CapsuleCollider:
@@ -427,6 +427,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4128622608723367622}
     m_Modifications:
+    - target: {fileID: 651930328997691192, guid: 0766ad9d1082f594d90205125c1f1d08, type: 3}
+      propertyPath: ShapeModule.radius.value
+      value: 1.69
+      objectReference: {fileID: 0}
     - target: {fileID: 1144260337876623206, guid: 0766ad9d1082f594d90205125c1f1d08, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -437,11 +441,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1144260337876623206, guid: 0766ad9d1082f594d90205125c1f1d08, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 0.223
       objectReference: {fileID: 0}
     - target: {fileID: 1144260337876623206, guid: 0766ad9d1082f594d90205125c1f1d08, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -0.156
       objectReference: {fileID: 0}
     - target: {fileID: 1144260337876623206, guid: 0766ad9d1082f594d90205125c1f1d08, type: 3}
       propertyPath: m_LocalRotation.w
