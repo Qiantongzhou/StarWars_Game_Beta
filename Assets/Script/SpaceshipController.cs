@@ -173,7 +173,7 @@ public sealed class SpaceshipController : MonoBehaviour
         if (m_spaceship.enemies_text!= null) m_spaceship.enemies_text.text = m_spaceship.enemies.Count.ToString();
 
         if (m_spaceship.enemies.Count==0){
-			UIcoroutines.instance.GameOver(false);
+			//UIcoroutines.instance.GameOver(false);
 		}
 
 		if(m_spaceship.HP<=0){

@@ -143,7 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slots: 0
   clip: {fileID: 0}
-  missileprefab: {fileID: 0}
+  missileprefab: {fileID: 1564468091806366, guid: f1dc4df701f37324c98ea16f41770afc, type: 3}
 --- !u!1 &8992410059723631855
 GameObject:
   m_ObjectHideFlags: 0

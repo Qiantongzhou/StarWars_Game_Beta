@@ -46,7 +46,7 @@ public class player : MonoBehaviour
     gamesaving gamesaving;
     Canvas canvas;
     float timecaculate;
-    void Start()
+    void Awake()
     {
         gamesaving = GameObject.Find("gamesaving").GetComponent<gamesaving>();
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();

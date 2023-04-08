@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class javalinmissile : EnhancementSkill
@@ -14,8 +15,10 @@ public class javalinmissile : EnhancementSkill
     // Start is called before the first frame update
     public override void DoAction()
     {
-        
-       
+      GameObject player=  GameObject.FindWithTag("Player");
+       GameObject temp= Instantiate(missileprefab, player.transform.position, Quaternion.identity);
+        temp.transform.localScale=temp.transform.localScale*10;
+        temp.transform.localRotation = player.transform.rotation;
     }
         // Update is called once per frame
         void Update()

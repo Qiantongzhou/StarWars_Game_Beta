@@ -12,7 +12,7 @@ public class EquipmentInventorys : MonoBehaviour, IDropHandler
 
         if (transform.childCount == 0)
         {
-            GetComponentInParent<SlotManager>().attachEquipment(int.Parse(name.Substring(11, 1)) - 1, empty);
+          //  GetComponentInParent<SlotManager>().attachEquipment(int.Parse(name.Substring(11, 1)) - 1, empty);
         }
     }
     public void OnDrop(PointerEventData eventData)

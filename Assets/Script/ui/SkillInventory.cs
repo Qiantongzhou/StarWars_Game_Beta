@@ -13,7 +13,7 @@ public class SkillInventory : MonoBehaviour, IDropHandler
 
         if (transform.childCount==0)
         {
-            GetComponentInParent<SlotManager>().attachSkill(int.Parse(name.Substring(11, 1)) - 1, empty);
+            //GetComponentInParent<SlotManager>().attachSkill(int.Parse(name.Substring(11, 1)) - 1, empty);
         }
     }
     public void OnDrop(PointerEventData eventData)
