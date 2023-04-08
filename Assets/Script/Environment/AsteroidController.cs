@@ -4,6 +4,9 @@ public class AsteroidController : MonoBehaviour
 {
     public float speed = 100f;
 
+    public GameObject explosionPrefab;
+
+
     void Start()
     {
         GetComponent<Rigidbody>().AddForce(transform.forward * speed);
@@ -19,7 +22,8 @@ public class AsteroidController : MonoBehaviour
     {
         if (other.CompareTag("MapLimit"))
         {
-            // Instantiate Explosion
+            GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            //explosion.GetComponent<ParticleSystem>().startSize = gameObject.transform.localScale.x;
             Destroy(gameObject);
         }
     }

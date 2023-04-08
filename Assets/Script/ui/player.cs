@@ -50,7 +50,7 @@ public class player : MonoBehaviour
     {
         gamesaving = GameObject.Find("gamesaving").GetComponent<gamesaving>();
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
-        attr = GetComponent<Attributes>();
+        //attr// = GetComponent<Attributes>();
         equipAttr = gameObject.AddComponent<Attributes>();
         skillAttr = gameObject.AddComponent<Attributes>();
         ResultAttr = gameObject.AddComponent<Attributes>();
@@ -73,34 +73,34 @@ public class player : MonoBehaviour
         ResultAttr += equipAttr;
         ResultAttr += skillAttr;
 
-        TMP_Text[] j = GameObject.Find("Canvas").GetComponent<Canvas>().GetComponentsInChildren<TMP_Text>();
-        j[3].text = gems.ToString();
-        j[4].text = Mathf.FloorToInt(gold).ToString();
+        //TMP_Text[] j = GameObject.Find("Canvas").GetComponent<Canvas>().GetComponentsInChildren<TMP_Text>();
+        //j[3].text = gems.ToString();
+        //j[4].text = Mathf.FloorToInt(gold).ToString();
 
 
-        float value = (float)getcurrenthealth() / ResultAttr.healthpoint;
-        float magic = (float)getcurrentmagic() / ResultAttr.magicpoint;
+        //float value = (float)getcurrenthealth() / ResultAttr.healthpoint;
+        //float magic = (float)getcurrentmagic() / ResultAttr.magicpoint;
 
-        Slider[] y = canvas.GetComponentsInChildren<Slider>();
-        y[0].value = value;
-        y[1].value = magic;
-        TMP_Text[] x= canvas.GetComponentsInChildren<TMP_Text>();
-        x[0].text = getcurrenthealth() + "/" + ResultAttr.healthpoint;
-        x[1].text = getcurrentmagic() + "/" + ResultAttr.magicpoint;
-        if (ResultAttr.attackdamagebonus > 0)
-        {
-            x[5].text = ResultAttr.attackdamage.ToString() + "<color=green>+" + ResultAttr.attackdamagebonus.ToString() + "</color>";
-        }
-        if (ResultAttr.attackdamagebonus < 0)
-        {
-            x[5].text = ResultAttr.attackdamage.ToString() + "<color=red>+" + ResultAttr.attackdamagebonus.ToString() + "</color>";
-        }
-        if (ResultAttr.attackdamagebonus == 0)
-        {
-            x[5].text = ResultAttr.attackdamage.ToString();
-        }
-        x[6].text = ResultAttr.critdamage.ToString();
-        x[7].text = ResultAttr.damageblock.ToString();
+        //Slider[] y = canvas.GetComponentsInChildren<Slider>();
+        //y[0].value = value;
+        //y[1].value = magic;
+        //TMP_Text[] x= canvas.GetComponentsInChildren<TMP_Text>();
+        //x[0].text = getcurrenthealth() + "/" + ResultAttr.healthpoint;
+        //x[1].text = getcurrentmagic() + "/" + ResultAttr.magicpoint;
+        //if (ResultAttr.attackdamagebonus > 0)
+        //{
+        //    x[5].text = ResultAttr.attackdamage.ToString() + "<color=green>+" + ResultAttr.attackdamagebonus.ToString() + "</color>";
+        //}
+        //if (ResultAttr.attackdamagebonus < 0)
+        //{
+        //    x[5].text = ResultAttr.attackdamage.ToString() + "<color=red>+" + ResultAttr.attackdamagebonus.ToString() + "</color>";
+        //}
+        //if (ResultAttr.attackdamagebonus == 0)
+        //{
+        //    x[5].text = ResultAttr.attackdamage.ToString();
+        //}
+        //x[6].text = ResultAttr.critdamage.ToString();
+        //x[7].text = ResultAttr.damageblock.ToString();
     }
     private void FixedUpdate()
     {
