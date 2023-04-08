@@ -16,7 +16,9 @@ public class Attributes : MonoBehaviour
                                 , magicdamage
                                 , attackrange
                                 , attackspeed
-                                , movespeed}
+                                , movespeed
+                                , turnrate
+    }
 
     public int healthpoint;
 
@@ -40,6 +42,7 @@ public class Attributes : MonoBehaviour
     public int attackspeed;
 
     public int movespeed;
+    public int turnrate;
 
     static public Attributes operator +(Attributes attr, Attributes other)
     {
@@ -55,6 +58,7 @@ public class Attributes : MonoBehaviour
         attr.attackrange += other.attackrange;
         attr.attackspeed += other.attackspeed;
         attr.movespeed += other.movespeed;
+        attr.turnrate += other.turnrate;
 
         return attr;
     }
@@ -73,6 +77,7 @@ public class Attributes : MonoBehaviour
         movespeed = 0;
         attackrange = 0;
         attackspeed = 0;
+        turnrate = 0;
     }
 
 
@@ -112,6 +117,9 @@ public class Attributes : MonoBehaviour
                 break;
             case AttributeName.movespeed:
                 movespeed += value;
+                break;
+            case AttributeName.turnrate:
+                turnrate += value;
                 break;  
         }
     }
