@@ -19,16 +19,17 @@ public class AgentBT : MonoBehaviour {
 
         // Build behavior tree
         root = new SelectorNode();
+        
+        SequenceNode emergencyEvasionSeq = new SequenceNode();
+        emergencyEvasionSeq.AddChild(new CheckMissleInAreaNode(btAgent, 30f));
+        emergencyEvasionSeq.AddChild(new TacticalManeuverNode(btAgent));
         SequenceNode testSeq = new SequenceNode();
-        //testSeq.AddChild(new AstarRandomMoveNode(btAgent));
+        testSeq.AddChild(new AstarRandomMoveNode(btAgent));
         //testSeq.AddChild(new AstarMove2TargetNode(btAgent));
         //testSeq.AddChild(new TurnTowardsTargetNode(btAgent));
-        SequenceNode emergencyEvasionSeq = new SequenceNode();
-        //emergencyEvasionSeq.AddChild(new CheckMissleInAreaNode(btAgent, 10f));
-        emergencyEvasionSeq.AddChild(new TacticalManeuverNode(btAgent));
 
-        //root.AddChild(testSeq);
         root.AddChild(emergencyEvasionSeq);
+        root.AddChild(testSeq);
     }
 
     // Update is called once per frame

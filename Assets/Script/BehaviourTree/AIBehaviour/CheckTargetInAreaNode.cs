@@ -4,7 +4,6 @@ using UnityEngine;
 using static Node;
 
 public class CheckTargetInAreaNode : ConditionNode {
-    private Transform currentTargetTransform;
     private MSBT msbt;
     private float dectectRadius;
 
@@ -13,7 +12,6 @@ public class CheckTargetInAreaNode : ConditionNode {
     public CheckTargetInAreaNode(MSBT msbt, float dectectRadius) {
         this.msbt = msbt;
         this.dectectRadius = dectectRadius;
-        currentTargetTransform = msbt.target;
     }
     public override NodeStatus Execute() {
         if (CheckForEnemiesArea()) {
@@ -43,7 +41,13 @@ public class CheckTargetInAreaNode : ConditionNode {
         }
 
         if (closestEnemy != null) {
-            msbt.target = closestEnemy.gameObject.transform.parent.parent;
+            Debug.Log(closestEnemy.gameObject.tag);
+            if (closestEnemy.gameObject.CompareTag("Player")) {
+                msbt.target = closestEnemy.gameObject.transform.parent;
+            }
+            else {
+                msbt.target = closestEnemy.gameObject.transform.parent.parent;
+            }
             if (msbt.debug) {
                 Debug.DrawRay(closestEnemy.gameObject.transform.position, Vector3.up, Color.red, 5f);
             }

@@ -20,7 +20,6 @@ public class Missle : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        print(target);
         rb = transform.GetComponent<Rigidbody>();
         forwardDirection = transform.forward;
         Invoke("StartTracking", 0f);

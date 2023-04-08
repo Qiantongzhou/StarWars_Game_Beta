@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 6887684109517197841}
   - component: {fileID: 6887684109517197869}
   - component: {fileID: 6887684109517197868}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Missle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -140,7 +140,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6887684111020349814}
   - component: {fileID: 6887684111020349815}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -37,9 +37,9 @@ public class TacticalManeuverNode : ActionNode
     public IEnumerator TacticalManeuver() {
         Vector3 initialPosition = btAgent.transform.position;
         Quaternion initialRotation = btAgent.transform.rotation;
-        Quaternion desiredRotation = btAgent.transform.rotation * Quaternion.Euler(RandomSign()*120f, RandomSign()*90f, 0f);
+        Quaternion desiredRotation = btAgent.transform.rotation * Quaternion.Euler(RandomSign()*120f, 90f, 0f);
         float elapsedTime = 0f;
-        float maneuverTime = 1f;
+        float maneuverTime = 0.8f;
         while (elapsedTime < maneuverTime) {
             float t = elapsedTime / maneuverTime;
             btAgent.transform.rotation = Quaternion.Lerp(initialRotation, desiredRotation, t);
@@ -47,7 +47,6 @@ public class TacticalManeuverNode : ActionNode
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-        yield return new WaitForSeconds(2f);
         isManeuvering = false;
     }
 
