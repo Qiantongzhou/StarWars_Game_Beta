@@ -5,7 +5,7 @@ using UnityEngine;
 public class Portal : MonoBehaviour
 {
     public static Portal instance;
-    public Transform _ship;
+    private Transform _ship;
     public Transform _destination;
 
     private static bool playerIsOverlapping = false;

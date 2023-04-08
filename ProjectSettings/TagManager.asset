@@ -8,6 +8,7 @@ TagManager:
   - MapLimit
   - Obstacle
   - MissleLauncher
+  - Ally
   layers:
   - Default
   - TransparentFX
