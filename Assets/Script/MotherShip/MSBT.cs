@@ -5,7 +5,6 @@ using UnityEngine;
 public class MSBT : MonoBehaviour {
     public bool debug;
 
-    public Transform target;
     public GameObject misslePrefab;
     public float turnSpeed;
     public float defensiveRange;
@@ -15,6 +14,7 @@ public class MSBT : MonoBehaviour {
 
     [HideInInspector] public Transform[] missleLauncher;
     [HideInInspector] public Transform laserNozzle;
+    [HideInInspector] public Transform target;
    
     private void Start() {
         msbt = this;

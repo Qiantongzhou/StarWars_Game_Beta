@@ -4,56 +4,28 @@ using UnityEngine;
 
 public class Portal : MonoBehaviour
 {
-    public static Portal instance;
     private Transform _ship;
     public Transform _destination;
 
-    private static bool playerIsOverlapping = false;
-
-    private void Start()
-    {
-       
-    }
-    private void LateUpdate()
-    {
-        //Vector3 portalToPlayer = _ship.position - transform.position;
-        // Teleport ship
-        if (playerIsOverlapping)
-        {
-            float rotationDif = -Quaternion.Angle(transform.rotation, _destination.rotation);
-            rotationDif += 180;
-
-            _ship.Rotate(Vector3.up, rotationDif);
-
-            //Vector3 positonOffset = Quaternion.Euler(0f, rotationDif, 0f) * portalToPlayer;
-            //_ship.position = _destination.position + positonOffset;
-            _ship.position = _destination.position;
-
-            StartCoroutine(Teleport());
-        }
-    }
-
-    IEnumerator Teleport()
-    {
-        yield return new WaitForSeconds(4);
-        playerIsOverlapping = false;
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") || other.CompareTag("Enemy") || other.CompareTag("Ally"))
+        if (other.CompareTag("Player"))
         {
-            _ship = other.transform;
-            playerIsOverlapping = true;
-            //StartCoroutine(Teleport());
+            _ship = other.transform.parent;
+            teleport();
+        }
+        else {
+            // Todo
         }
     }
 
-    private void OnTriggerExit(Collider other)
-    {
-        if (other.CompareTag("Player") || other.CompareTag("Enemy") || other.CompareTag("Ally"))
-        {
-           
-        }
+    public void teleport() {
+        Vector3 portalUp = _destination.transform.up;
+        Vector3 shipForward = _ship.transform.forward;
+        float angle = Vector3.SignedAngle(shipForward, portalUp, Vector3.Cross(portalUp, shipForward));
+
+        _ship.Rotate(Vector3.Cross(portalUp, shipForward), angle);
+        _ship.position = _destination.position + _destination.up * 20f;
     }
+
 }

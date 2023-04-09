@@ -11,15 +11,18 @@ public class menuout : MonoBehaviour
         animator = GameObject.Find("Canvas").transform.GetChild(0).GetComponent<Animator>();
     }
 
+    private void Update() {
+        if (Input.GetKeyDown(KeyCode.Tab)) {
+            menuoutarrow();
+        }
+    }
+
     public void menuoutarrow()
     {
         transform.localScale = new Vector3(-transform.localScale.x,transform.localScale.y,transform.localScale.z);
         if(animator != null )
         {
-            animator.SetFloat("multi", -animator.GetFloat("multi"));
-            animator.SetBool("out", true);
-            print(-animator.GetFloat("multi"));
-            
+            animator.SetBool("menuOutTrigger", true);
         }
     }
 }
