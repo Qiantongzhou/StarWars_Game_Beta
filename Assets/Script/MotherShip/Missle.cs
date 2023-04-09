@@ -55,6 +55,7 @@ public class Missle : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision) {
         Instantiate(effectPrefab, transform.position, transform.rotation);
+        SoundManager.instance.Play("Explosion");
         Destroy(gameObject);
     }
 }
