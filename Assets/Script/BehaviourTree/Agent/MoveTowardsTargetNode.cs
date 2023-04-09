@@ -2,29 +2,35 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TurnTowardsTargetNode : ActionNode {
+public class MoveTowardsTargetNode : ActionNode {
     Transform currentTargetTransform;
     AgentBT btAgent;
     float turnSpeed = 5f;
+    Rigidbody rb;
 
     // initialize
-    public TurnTowardsTargetNode(AgentBT btAgent) {
+    public MoveTowardsTargetNode(AgentBT btAgent) {
         this.btAgent = btAgent;
-        currentTargetTransform = btAgent.target;
+        this.rb = btAgent.GetComponent<Rigidbody>();
     }
 
     // execute
     public override NodeStatus Execute() {
-        TurnTowardsTarget();
+        currentTargetTransform = btAgent.target;
+        MoveTowardsTarget();
         return NodeStatus.SUCCESS;
     }
 
-    public void TurnTowardsTarget() {
+    public void MoveTowardsTarget() {
         if (currentTargetTransform != null) {
             Vector3 targetDirection = currentTargetTransform.position - btAgent.transform.position;
             if (targetDirection.magnitude > 1f) {
                 Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
-                btAgent.gameObject.transform.rotation = Quaternion.Slerp(btAgent.gameObject.transform.rotation, targetRotation, Time.deltaTime * turnSpeed);
+                rb.MoveRotation(Quaternion.Slerp(rb.rotation, targetRotation, Time.deltaTime * turnSpeed));
+                float distance = targetDirection.magnitude;
+                if (distance > 100f) {
+                    rb.MovePosition(rb.position + btAgent.transform.forward * btAgent.speed * Time.deltaTime);
+                }
             }
         }
     }

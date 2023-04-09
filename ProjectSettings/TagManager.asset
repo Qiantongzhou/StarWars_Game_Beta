@@ -4,12 +4,12 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
   - MapLimit
   - Obstacle
   - MissleLauncher
-  - Ally
   - entity
+  - Team1
+  - Team2
   layers:
   - Default
   - TransparentFX

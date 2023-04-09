@@ -116,3 +116,33 @@ public class InverterNode : DecoratorNode {
         }
     }
 }
+public class ParallelNode : CompositeNode {
+    public override NodeStatus Execute() {
+        bool allSuccess = true;
+        bool allFailure = true;
+
+        foreach (Node child in children) {
+            NodeStatus status = child.Execute();
+
+            if (status == NodeStatus.RUNNING) {
+                return NodeStatus.RUNNING;
+            }
+            else if (status == NodeStatus.SUCCESS) {
+                allFailure = false;
+            }
+            else if (status == NodeStatus.FAILURE) {
+                allSuccess = false;
+            }
+        }
+
+        if (allSuccess) {
+            return NodeStatus.SUCCESS;
+        }
+        else if (allFailure) {
+            return NodeStatus.FAILURE;
+        }
+        else {
+            return NodeStatus.RUNNING;
+        }
+    }
+}
