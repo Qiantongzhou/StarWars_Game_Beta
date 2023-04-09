@@ -627,7 +627,7 @@ GameObject:
   - component: {fileID: 94664744}
   - component: {fileID: 94664746}
   - component: {fileID: 94664745}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AsteroidVolume_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5639,6 +5639,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 8381371891691767362, guid: c7961db0e7cc31e44b4753228ff5e84f, type: 3}
+      propertyPath: m_Convex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8381371891693683590, guid: c7961db0e7cc31e44b4753228ff5e84f, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -6374,7 +6378,7 @@ GameObject:
   m_Component:
   - component: {fileID: 249349373}
   - component: {fileID: 249349374}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: PlanetCreame
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -6969,7 +6973,7 @@ GameObject:
   - component: {fileID: 329883581}
   - component: {fileID: 329883583}
   - component: {fileID: 329883582}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AsteroidVolume_9
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12126,6 +12130,11 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 431122934}
   m_Enabled: 1
+--- !u!20 &431122941 stripped
+Camera:
+  m_CorrespondingSourceObject: {fileID: 2048804, guid: 2f81eb69d5a7a634c9e09dd0bc6e02dc, type: 3}
+  m_PrefabInstance: {fileID: 1037135766}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &431849622 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 151100, guid: 5b84c93d85043144c991880024f2339f, type: 3}
@@ -12618,7 +12627,7 @@ GameObject:
   - component: {fileID: 502627994}
   - component: {fileID: 502627996}
   - component: {fileID: 502627995}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Planet_2_Ring_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12932,7 +12941,7 @@ GameObject:
   m_Component:
   - component: {fileID: 549475199}
   - component: {fileID: 549475200}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Planet_1
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -13609,8 +13618,8 @@ GameObject:
   - component: {fileID: 642422768}
   - component: {fileID: 642422771}
   - component: {fileID: 642422770}
-  - component: {fileID: 642422769}
-  m_Layer: 0
+  - component: {fileID: 642422772}
+  m_Layer: 8
   m_Name: Planet_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13632,20 +13641,6 @@ Transform:
   m_Father: {fileID: 2106637227}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &642422769
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 642422767}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300004, guid: 537296bf48bc78e439ca0be371098463, type: 3}
 --- !u!23 &642422770
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13696,6 +13691,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642422767}
   m_Mesh: {fileID: 4300004, guid: 537296bf48bc78e439ca0be371098463, type: 3}
+--- !u!135 &642422772
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642422767}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 40.177593
+  m_Center: {x: 0.00007057191, y: -0.000001907349, z: 0.000017166141}
 --- !u!1 &643424829 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 180978, guid: 5b84c93d85043144c991880024f2339f, type: 3}
@@ -14559,7 +14567,7 @@ GameObject:
   - component: {fileID: 846061963}
   - component: {fileID: 846061965}
   - component: {fileID: 846061964}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Planet_Ring_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14884,9 +14892,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 933533359}
     m_Modifications:
+    - target: {fileID: 100048, guid: 3c6f0c43f22c7d145a7342b8cc369712, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 109508, guid: 3c6f0c43f22c7d145a7342b8cc369712, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 146932, guid: 3c6f0c43f22c7d145a7342b8cc369712, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 161076, guid: 3c6f0c43f22c7d145a7342b8cc369712, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 175428, guid: 3c6f0c43f22c7d145a7342b8cc369712, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 190254, guid: 3c6f0c43f22c7d145a7342b8cc369712, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 191320, guid: 3c6f0c43f22c7d145a7342b8cc369712, type: 3}
       propertyPath: m_Name
       value: Planet_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 191320, guid: 3c6f0c43f22c7d145a7342b8cc369712, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 191320, guid: 3c6f0c43f22c7d145a7342b8cc369712, type: 3}
       propertyPath: m_TagString
@@ -15059,13 +15095,49 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 933533359}
     m_Modifications:
+    - target: {fileID: 108072, guid: dc8015af04672d64ea89b45917155c76, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 119374, guid: dc8015af04672d64ea89b45917155c76, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 123568, guid: dc8015af04672d64ea89b45917155c76, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 126544, guid: dc8015af04672d64ea89b45917155c76, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 132234, guid: dc8015af04672d64ea89b45917155c76, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 140354, guid: dc8015af04672d64ea89b45917155c76, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 152736, guid: dc8015af04672d64ea89b45917155c76, type: 3}
       propertyPath: m_Name
       value: PlanetBackground
       objectReference: {fileID: 0}
     - target: {fileID: 152736, guid: dc8015af04672d64ea89b45917155c76, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 152736, guid: dc8015af04672d64ea89b45917155c76, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 155074, guid: dc8015af04672d64ea89b45917155c76, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 155868, guid: dc8015af04672d64ea89b45917155c76, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 453038, guid: dc8015af04672d64ea89b45917155c76, type: 3}
       propertyPath: m_RootOrder
@@ -15181,7 +15253,7 @@ GameObject:
   m_Component:
   - component: {fileID: 925039668}
   - component: {fileID: 925039669}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Sun_1b
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
@@ -15439,7 +15511,7 @@ GameObject:
   - component: {fileID: 963453122}
   - component: {fileID: 963453124}
   - component: {fileID: 963453123}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AsteroidExtras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15819,7 +15891,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -15872,7 +15944,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -20460,13 +20532,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 933533359}
     m_Modifications:
+    - target: {fileID: 107656, guid: c9f48a2fec456fe4892bfbdee5fe8075, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 111092, guid: c9f48a2fec456fe4892bfbdee5fe8075, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 150698, guid: c9f48a2fec456fe4892bfbdee5fe8075, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 161328, guid: c9f48a2fec456fe4892bfbdee5fe8075, type: 3}
       propertyPath: m_Name
       value: PlanetWater_1
       objectReference: {fileID: 0}
     - target: {fileID: 161328, guid: c9f48a2fec456fe4892bfbdee5fe8075, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 161328, guid: c9f48a2fec456fe4892bfbdee5fe8075, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 166386, guid: c9f48a2fec456fe4892bfbdee5fe8075, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 198772, guid: c9f48a2fec456fe4892bfbdee5fe8075, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 414022, guid: c9f48a2fec456fe4892bfbdee5fe8075, type: 3}
       propertyPath: m_RootOrder
@@ -20652,13 +20748,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 933533359}
     m_Modifications:
+    - target: {fileID: 110314, guid: 17cbe45ca19be684ea84432701559aac, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 123232, guid: 17cbe45ca19be684ea84432701559aac, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 169246, guid: 17cbe45ca19be684ea84432701559aac, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 175896, guid: 17cbe45ca19be684ea84432701559aac, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 182322, guid: 17cbe45ca19be684ea84432701559aac, type: 3}
       propertyPath: m_Name
       value: Planet_Grey
       objectReference: {fileID: 0}
     - target: {fileID: 182322, guid: 17cbe45ca19be684ea84432701559aac, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 182322, guid: 17cbe45ca19be684ea84432701559aac, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 183946, guid: 17cbe45ca19be684ea84432701559aac, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 190012, guid: 17cbe45ca19be684ea84432701559aac, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 464138, guid: 17cbe45ca19be684ea84432701559aac, type: 3}
       propertyPath: m_RootOrder
@@ -20835,6 +20959,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 123564, guid: 2f81eb69d5a7a634c9e09dd0bc6e02dc, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 123568, guid: 2f81eb69d5a7a634c9e09dd0bc6e02dc, type: 3}
       propertyPath: m_Layer
       value: 6
@@ -20940,6 +21068,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2048804, guid: 2f81eb69d5a7a634c9e09dd0bc6e02dc, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048804, guid: 2f81eb69d5a7a634c9e09dd0bc6e02dc, type: 3}
       propertyPath: m_ClearFlags
       value: 1
       objectReference: {fileID: 0}
@@ -20959,6 +21091,10 @@ PrefabInstance:
       propertyPath: m_camera.Angle
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 11458530, guid: 2f81eb69d5a7a634c9e09dd0bc6e02dc, type: 3}
+      propertyPath: m_camera.TargetCamera
+      value: 
+      objectReference: {fileID: 431122941}
     - target: {fileID: 11458530, guid: 2f81eb69d5a7a634c9e09dd0bc6e02dc, type: 3}
       propertyPath: m_spaceship.SpeedRange.y
       value: 500
@@ -21200,7 +21336,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1066176950}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: MoonCenter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21443,7 +21579,7 @@ GameObject:
   - component: {fileID: 1110139877}
   - component: {fileID: 1110139879}
   - component: {fileID: 1110139878}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Planet_Ring_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21777,8 +21913,8 @@ GameObject:
   - component: {fileID: 1152834858}
   - component: {fileID: 1152834861}
   - component: {fileID: 1152834860}
-  - component: {fileID: 1152834859}
-  m_Layer: 0
+  - component: {fileID: 1152834862}
+  m_Layer: 8
   m_Name: Sun 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21800,20 +21936,6 @@ Transform:
   m_Father: {fileID: 925039668}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1152834859
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1152834857}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300002, guid: 2925eac9c57bf2949bde43cea6bbdedf, type: 3}
 --- !u!23 &1152834860
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -21864,6 +21986,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1152834857}
   m_Mesh: {fileID: 4300002, guid: 2925eac9c57bf2949bde43cea6bbdedf, type: 3}
+--- !u!135 &1152834862
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1152834857}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 52.549522
+  m_Center: {x: 0.00000095367426, y: -0.0000019073486, z: 0.000005722046}
 --- !u!1 &1154448336 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 101270, guid: 5b84c93d85043144c991880024f2339f, type: 3}
@@ -22379,7 +22514,7 @@ GameObject:
   - component: {fileID: 1269236536}
   - component: {fileID: 1269236538}
   - component: {fileID: 1269236537}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AsteroidExtras1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27169,7 +27304,7 @@ GameObject:
   - component: {fileID: 1296969423}
   - component: {fileID: 1296969425}
   - component: {fileID: 1296969424}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Planet_2_Ring_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27248,13 +27383,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 933533359}
     m_Modifications:
+    - target: {fileID: 125452, guid: f6be1d53deb0aa64db8e3c9d4b8bf821, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 147442, guid: f6be1d53deb0aa64db8e3c9d4b8bf821, type: 3}
       propertyPath: m_Name
       value: Planet_3
       objectReference: {fileID: 0}
     - target: {fileID: 147442, guid: f6be1d53deb0aa64db8e3c9d4b8bf821, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 147442, guid: f6be1d53deb0aa64db8e3c9d4b8bf821, type: 3}
       propertyPath: m_TagString
       value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 150876, guid: f6be1d53deb0aa64db8e3c9d4b8bf821, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 183224, guid: f6be1d53deb0aa64db8e3c9d4b8bf821, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 190386, guid: f6be1d53deb0aa64db8e3c9d4b8bf821, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 423308, guid: f6be1d53deb0aa64db8e3c9d4b8bf821, type: 3}
       propertyPath: m_RootOrder
@@ -29453,7 +29608,7 @@ MonoBehaviour:
   attackspeed: 0
   movespeed: 0
   turnrate: 0
---- !u!54 &1365036433
+--- !u!54 &1365036437
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -29462,12 +29617,12 @@ Rigidbody:
   m_GameObject: {fileID: 1365036422}
   serializedVersion: 2
   m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
+  m_Drag: 10
+  m_AngularDrag: 0.2
+  m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &1370152252 stripped
 GameObject:
@@ -29921,7 +30076,7 @@ GameObject:
   - component: {fileID: 1499627824}
   - component: {fileID: 1499627826}
   - component: {fileID: 1499627825}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Planet_Ring_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30166,7 +30321,7 @@ GameObject:
   - component: {fileID: 1560857421}
   - component: {fileID: 1560857423}
   - component: {fileID: 1560857422}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AsteroidExtras_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35448,7 +35603,7 @@ GameObject:
   - component: {fileID: 1651897348}
   - component: {fileID: 1651897347}
   - component: {fileID: 1651897346}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SunRing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35759,7 +35914,7 @@ GameObject:
   - component: {fileID: 1687327880}
   - component: {fileID: 1687327882}
   - component: {fileID: 1687327881}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AsteroidExtras_1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40511,7 +40666,7 @@ GameObject:
   - component: {fileID: 1691477976}
   - component: {fileID: 1691477978}
   - component: {fileID: 1691477977}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Moon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41272,8 +41427,8 @@ GameObject:
   - component: {fileID: 1835457541}
   - component: {fileID: 1835457544}
   - component: {fileID: 1835457543}
-  - component: {fileID: 1835457542}
-  m_Layer: 0
+  - component: {fileID: 1835457545}
+  m_Layer: 8
   m_Name: Planet_1 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41295,20 +41450,6 @@ Transform:
   m_Father: {fileID: 549475199}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &1835457542
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1835457540}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 0d1d233b42cea3143a678b3eeb02a79e, type: 3}
 --- !u!23 &1835457543
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -41359,6 +41500,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1835457540}
   m_Mesh: {fileID: 4300000, guid: 0d1d233b42cea3143a678b3eeb02a79e, type: 3}
+--- !u!135 &1835457545
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1835457540}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 48.337643
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1836034928 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 162022, guid: 5b84c93d85043144c991880024f2339f, type: 3}
@@ -42564,7 +42718,7 @@ GameObject:
   - component: {fileID: 2007198932}
   - component: {fileID: 2007198934}
   - component: {fileID: 2007198933}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AsteroidExtras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48001,8 +48155,8 @@ GameObject:
   - component: {fileID: 2098319059}
   - component: {fileID: 2098319062}
   - component: {fileID: 2098319061}
-  - component: {fileID: 2098319060}
-  m_Layer: 0
+  - component: {fileID: 2098319063}
+  m_Layer: 8
   m_Name: PlanetMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48024,20 +48178,6 @@ Transform:
   m_Father: {fileID: 249349373}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!64 &2098319060
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2098319058}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 8373132449235f9479d23ae466c73cf1, type: 3}
 --- !u!23 &2098319061
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -48088,6 +48228,19 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2098319058}
   m_Mesh: {fileID: 4300000, guid: 8373132449235f9479d23ae466c73cf1, type: 3}
+--- !u!135 &2098319063
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2098319058}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 49.6456
+  m_Center: {x: 0.0112457285, y: -0.06021881, z: 0.21712878}
 --- !u!1 &2106160449 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 122472, guid: 5b84c93d85043144c991880024f2339f, type: 3}
@@ -48136,7 +48289,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2106637227}
   - component: {fileID: 2106637228}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Planet_2
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
