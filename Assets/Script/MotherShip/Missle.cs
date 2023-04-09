@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class Missle : MonoBehaviour
 {
+    [HideInInspector] public Transform target;
+
     private float speed = 100f;
     private float rotationSpeed = 15f;
-    public Transform target;
     public GameObject effectPrefab;
 
     private Rigidbody rb;

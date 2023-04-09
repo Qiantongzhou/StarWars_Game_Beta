@@ -41,7 +41,6 @@ public class CheckTargetInAreaNode : ConditionNode {
         }
 
         if (closestEnemy != null) {
-            Debug.Log(closestEnemy.gameObject.tag);
             if (closestEnemy.gameObject.CompareTag("Player")) {
                 msbt.target = closestEnemy.gameObject.transform.parent;
             }
