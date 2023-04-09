@@ -85,7 +85,7 @@ public class player : MonoBehaviour
         y[0].value = value;
         y[1].value = magic;
         TMP_Text[] x = canvas.GetComponentsInChildren<TMP_Text>();
-        x[7].text ="Health:"+getcurrenthealth() + "/" + ResultAttr.healthpoint;
+        x[4].text ="Health:"+getcurrenthealth() + "/" + ResultAttr.healthpoint;
         x[6].text = "sheild:"+getcurrentmagic() + "/" + ResultAttr.magicpoint;
         if (ResultAttr.attackdamagebonus > 0)
         {
