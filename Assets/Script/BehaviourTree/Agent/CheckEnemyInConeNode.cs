@@ -60,7 +60,7 @@ public class CheckEnemyInConeNode : ConditionNode {
             float angle = Vector3.Angle(directionToTarget, forward);
 
             // check in Cone
-            if (angle <= 360f) {
+            if (angle <= 180f) {
                 // check obstacle
                 if (!CheckObstacleBetween(col.gameObject)) {
                     if (distance < closestDistance) {

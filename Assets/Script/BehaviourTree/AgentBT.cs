@@ -9,6 +9,8 @@ public class AgentBT : MonoBehaviour {
     public float turnSpeed = 1f;
     public Transform target;
     public Transform motherShipTarget;
+    public Transform missleLauncher;
+    public GameObject misslePrefab;
     private AStarAgent aStarAgent;
     private AgentBT btAgent;
     private SelectorNode root;
@@ -17,7 +19,7 @@ public class AgentBT : MonoBehaviour {
         btAgent = GetComponent<AgentBT>();
         aStarAgent = GetComponent<AStarAgent>();
         aStarAgent.setSpeed(speed, turnSpeed);
-
+        missleLauncher = transform.GetChild(1);
 
         // Build behavior tree
         root = new SelectorNode();
@@ -34,13 +36,14 @@ public class AgentBT : MonoBehaviour {
         seekMovementParalle.AddChild(new ObstacleAvoidanceNode(btAgent, 100f, 30f, speed));
         offensiveSeq.AddChild(seekMovementParalle);
 
-        offensiveSeq.AddChild(new AttackEnemyNode(btAgent));
+        offensiveSeq.AddChild(new AttackEnemyNode(btAgent,misslePrefab));
 
         // if enemy not in cone but target is set, move towards target
         SequenceNode traceSeq = new SequenceNode();
         traceSeq.AddChild(new AstarMove2TargetNode(btAgent));
 
         // if no enemy detected, check if mother ship was found
+
 
         // else move Random
         SequenceNode testSeq = new SequenceNode();
