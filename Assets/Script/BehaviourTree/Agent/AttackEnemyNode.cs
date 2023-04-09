@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class AttackEnemyNode : ActionNode 
@@ -8,9 +9,11 @@ public class AttackEnemyNode : ActionNode
     private float lastExecutedTime = 0f;
     private float executionInterval = 0.1f;
     private bool isFirstExecution = true;
+    private GameObject misslePrefab;
 
-    public AttackEnemyNode(AgentBT btAgent) {
+    public AttackEnemyNode(AgentBT btAgent, GameObject misslePrefab) {
         this.btAgent = btAgent;
+        this.misslePrefab = misslePrefab;
     }
 
     public override NodeStatus Execute() {
@@ -26,8 +29,10 @@ public class AttackEnemyNode : ActionNode
     }
 
     public void Fire() {
+        Debug.DrawLine(btAgent.missleLauncher.position, btAgent.missleLauncher.position + btAgent.missleLauncher.TransformDirection(Vector3.forward), Color.red, 0.1f);
         if (btAgent != null) {
-            Debug.Log("Fire");
+            GameObject missle = AgentBT.Instantiate(btAgent.misslePrefab, btAgent.missleLauncher.position, btAgent.missleLauncher.rotation);
+            missle.GetComponent<Missle>().target = btAgent.target;
         }
     }
 

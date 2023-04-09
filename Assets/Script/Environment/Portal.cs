@@ -11,7 +11,7 @@ public class Portal : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            _ship = other.transform.parent;
+            _ship = other.transform;
             teleport();
         }
         else {
@@ -25,7 +25,7 @@ public class Portal : MonoBehaviour
         float angle = Vector3.SignedAngle(shipForward, portalUp, Vector3.Cross(portalUp, shipForward));
 
         _ship.Rotate(Vector3.Cross(portalUp, shipForward), angle);
-        _ship.position = _destination.position + _destination.up * 20f;
+        _ship.position = _destination.position + _destination.up * 60f;
     }
 
 }
