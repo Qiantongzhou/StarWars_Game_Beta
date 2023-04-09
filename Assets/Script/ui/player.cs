@@ -73,32 +73,33 @@ public class player : MonoBehaviour
         ResultAttr += equipAttr;
         ResultAttr += skillAttr;
 
-        //TMP_Text[] j = GameObject.Find("Canvas").GetComponent<Canvas>().GetComponentsInChildren<TMP_Text>();
-        //j[3].text = gems.ToString();
-        //j[4].text = Mathf.FloorToInt(gold).ToString();
+        TMP_Text[] j = GameObject.Find("Canvas").GetComponent<Canvas>().GetComponentsInChildren<TMP_Text>();
+        //j[3].text = "Gem:"+gems.ToString();
+        //j[4].text = "Gold:"+Mathf.FloorToInt(gold).ToString();
 
 
-        //float value = (float)getcurrenthealth() / ResultAttr.healthpoint;
-        //float magic = (float)getcurrentmagic() / ResultAttr.magicpoint;
+        float value = (float)getcurrenthealth() / ResultAttr.healthpoint;
+        float magic = (float)getcurrentmagic() / ResultAttr.magicpoint;
 
-        //Slider[] y = canvas.GetComponentsInChildren<Slider>();
-        //y[0].value = value;
-        //y[1].value = magic;
-        //TMP_Text[] x= canvas.GetComponentsInChildren<TMP_Text>();
-        //x[0].text = getcurrenthealth() + "/" + ResultAttr.healthpoint;
-        //x[1].text = getcurrentmagic() + "/" + ResultAttr.magicpoint;
-        //if (ResultAttr.attackdamagebonus > 0)
-        //{
-        //    x[5].text = ResultAttr.attackdamage.ToString() + "<color=green>+" + ResultAttr.attackdamagebonus.ToString() + "</color>";
-        //}
-        //if (ResultAttr.attackdamagebonus < 0)
-        //{
-        //    x[5].text = ResultAttr.attackdamage.ToString() + "<color=red>+" + ResultAttr.attackdamagebonus.ToString() + "</color>";
-        //}
-        //if (ResultAttr.attackdamagebonus == 0)
-        //{
-        //    x[5].text = ResultAttr.attackdamage.ToString();
-        //}
+        Slider[] y = canvas.GetComponentsInChildren<Slider>();
+        y[0].value = value;
+        y[1].value = magic;
+        TMP_Text[] x = canvas.GetComponentsInChildren<TMP_Text>();
+        x[7].text ="Health:"+getcurrenthealth() + "/" + ResultAttr.healthpoint;
+        x[6].text = "sheild:"+getcurrentmagic() + "/" + ResultAttr.magicpoint;
+        if (ResultAttr.attackdamagebonus > 0)
+        {
+            x[5].text ="Damage:"+ ResultAttr.attackdamage.ToString() + "<color=green>+" + ResultAttr.attackdamagebonus.ToString() + "</color>";
+        }
+        if (ResultAttr.attackdamagebonus < 0)
+        {
+            x[5].text = "Damage:" + ResultAttr.attackdamage.ToString() + "<color=red>+" + ResultAttr.attackdamagebonus.ToString() + "</color>";
+        }
+        if (ResultAttr.attackdamagebonus == 0)
+        {
+            x[5].text = "Damage:" + ResultAttr.attackdamage.ToString();
+        }
+        x[4].text = "MaxSpeed:"+ResultAttr.movespeed.ToString();
         //x[6].text = ResultAttr.critdamage.ToString();
         //x[7].text = ResultAttr.damageblock.ToString();
     }

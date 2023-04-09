@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ProjectileMover : MonoBehaviour
 {
-    public float speed = 15f;
+    public float speed = 30f;
     public float hitOffset = 0f;
     public bool UseFirePointRotation;
     public Vector3 rotationOffset = new Vector3(0, 0, 0);

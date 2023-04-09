@@ -16,9 +16,10 @@ public class javalinmissile : EnhancementSkill
     public override void DoAction()
     {
       GameObject player=  GameObject.FindWithTag("Player");
-       GameObject temp= Instantiate(missileprefab, player.transform.position, Quaternion.identity);
+        
+       GameObject temp= Instantiate(missileprefab, player.transform.GetChild(1).transform.position, Quaternion.identity);
         temp.transform.localScale=temp.transform.localScale*10;
-        temp.transform.localRotation = player.transform.rotation;
+        temp.transform.localRotation = player.transform.GetChild(1).transform.rotation;
     }
         // Update is called once per frame
         void Update()
