@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class selectyourplane : MonoBehaviour
@@ -64,5 +65,6 @@ public class selectyourplane : MonoBehaviour
         GameSetting.currentplayerplane = currentCameraIndex;
         print("you have selected starShip: " + GameSetting.currentplayerplane);
         //change scene here
+        SceneManager.LoadScene("TeamProject");
     }
 }

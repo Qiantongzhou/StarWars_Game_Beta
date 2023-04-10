@@ -8,7 +8,7 @@ public class menuout : MonoBehaviour
 
     private void Start()
     {
-        animator = GameObject.Find("Canvas").transform.GetChild(GameObject.Find("Canvas").transform.childCount-1).GetComponent<Animator>();
+        animator = GameObject.Find("Canvas").transform.GetChild(GameObject.Find("Canvas").transform.childCount-2).GetComponent<Animator>();
     }
 
     private void Update() {
