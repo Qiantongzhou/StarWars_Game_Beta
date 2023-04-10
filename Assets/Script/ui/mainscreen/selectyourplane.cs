@@ -31,6 +31,16 @@ public class selectyourplane : MonoBehaviour
         {
             nextplane();
         }
+        if (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.UpArrow)) {
+            previousplane();
+        }
+        if (Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.DownArrow)) {
+            nextplane();
+        }
+        if (Input.GetKeyDown(KeyCode.Return)) {
+            selectthisplane();
+        }
+
     }
     public void nextplane()
     {
