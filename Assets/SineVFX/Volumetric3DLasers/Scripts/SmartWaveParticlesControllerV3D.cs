@@ -32,12 +32,11 @@ public class SmartWaveParticlesControllerV3D : MonoBehaviour
     public void SpawnWave()
     {
         controlParticles = new ParticleSystem.Particle[5];
+    }
 
-        if (Input.GetMouseButtonDown(0))
-        {
-            distortionSpherePS.Emit(1);
-            controlPS.Emit(1);
-        }
+    public void distortionSphereEmit() {
+        distortionSpherePS.Emit(1);
+        controlPS.Emit(1);
     }
 
     void Update()

@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Entrance.unity
     guid: 3cc27317936a1ca46a10f77bd64a7c94
   - enabled: 1
+    path: Assets/Scenes/animation.unity
+    guid: 4a366f84aa3a13f429a34cd9d8062e62
+  - enabled: 1
     path: Assets/Scenes/mainscreen.unity
     guid: d0c15add04765294c8212f3a55d2a554
   - enabled: 1

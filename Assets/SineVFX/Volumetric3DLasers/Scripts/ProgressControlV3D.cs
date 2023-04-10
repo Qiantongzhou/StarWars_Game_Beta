@@ -139,6 +139,7 @@ public class ProgressControlV3D : MonoBehaviour {
             sfxcontroller.isFired = true;
         }
         isFireSoundAllowed = false;
+        smartWaveParticles.distortionSphereEmit();
         Invoke("EndLaserFire", 2f);
     }
 

@@ -11,6 +11,6 @@ public class EntranceManager : MonoBehaviour
 
     public void StartGame() {
         Time.timeScale = 1;
-        SceneManager.LoadScene("mainscreen");
+        SceneManager.LoadScene("animation");
     }
 }
