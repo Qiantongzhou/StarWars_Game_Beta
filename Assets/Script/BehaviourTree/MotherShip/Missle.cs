@@ -7,9 +7,11 @@ public class Missle : MonoBehaviour
 {
     [HideInInspector] public Transform target;
 
-    private float speed = 100f;
-    private float rotationSpeed = 15f;
+    public float frequency;
+    public float speed = 100f;
+    public float rotationSpeed = 15f;
     public GameObject effectPrefab;
+    public bool isTrackable = true;
 
     private Rigidbody rb;
     private Vector3 forwardDirection;
@@ -27,7 +29,7 @@ public class Missle : MonoBehaviour
     }
 
     private void StartTracking() {
-        InvokeRepeating("TrackTarget", 0f, 0.1f + Random.Range(0f, 0.1f));
+        InvokeRepeating("TrackTarget", 0f, frequency + Random.Range(0f, frequency));
         Invoke("DestroyMissile", 15f);
     }
 
@@ -35,7 +37,7 @@ public class Missle : MonoBehaviour
         timer += Time.fixedDeltaTime;
         Vector3 direction = (target.position - transform.position).normalized;
         float distance = Vector3.Distance(transform.position, target.position);
-        if (timer < forwardTime) {
+        if (timer < forwardTime || !isTrackable) {
             direction = forwardDirection;
         }
 
@@ -54,7 +56,7 @@ public class Missle : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnCollisionEnter(Collision collision) {
+    private void OnTriggerEnter(Collider other) {
         Instantiate(effectPrefab, transform.position, transform.rotation);
         Destroy(gameObject);
     }

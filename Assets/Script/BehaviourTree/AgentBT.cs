@@ -26,34 +26,44 @@ public class AgentBT : MonoBehaviour {
 
         SequenceNode emergencyEvasionSeq = new SequenceNode();
         emergencyEvasionSeq.AddChild(new CheckMissleInAreaNode(btAgent, 30f));
-        emergencyEvasionSeq.AddChild(new TacticalManeuverNode(btAgent));
+        emergencyEvasionSeq.AddChild(new TacticalManeuverNode(btAgent, 0.8f));
+
+        SequenceNode proximityConflictEvasionSeq = new SequenceNode();
+        proximityConflictEvasionSeq.AddChild(new CheckEnemyInProximityNode(btAgent, 80f));
+        proximityConflictEvasionSeq.AddChild(new TacticalManeuverNode(btAgent, 1.1f));
+
         // if enemy in cone, attack;
         SequenceNode offensiveSeq = new SequenceNode();
-        offensiveSeq.AddChild(new CheckEnemyInConeNode(btAgent, 500f, 10f));
+        offensiveSeq.AddChild(new CheckEnemyInConeNode(btAgent, 500f, 3f));
 
         ParallelNode seekMovementParalle = new ParallelNode();
         seekMovementParalle.AddChild(new MoveTowardsTargetNode(btAgent));
+        offensiveSeq.AddChild(new AttackEnemyNode(btAgent, misslePrefab));
         seekMovementParalle.AddChild(new ObstacleAvoidanceNode(btAgent, 100f, 30f, speed));
         offensiveSeq.AddChild(seekMovementParalle);
 
-        offensiveSeq.AddChild(new AttackEnemyNode(btAgent,misslePrefab));
+        
 
         // if enemy not in cone but target is set, move towards target
         SequenceNode traceSeq = new SequenceNode();
         traceSeq.AddChild(new AstarMove2TargetNode(btAgent));
 
         // if no enemy detected, check if mother ship was found
-
+        //SequenceNode attackMotherShipSeq = new SequenceNode();
+        //attackMotherShipSeq.AddChild(new AstarMove2TargetNode(btAgent));
+        //attack 
 
         // else move Random
-        SequenceNode testSeq = new SequenceNode();
-        testSeq.AddChild(new AstarRandomMoveNode(btAgent));
+        SequenceNode wanderSeq = new SequenceNode();
+        wanderSeq.AddChild(new AstarRandomMoveNode(btAgent));
         
 
         root.AddChild(emergencyEvasionSeq);
+        root.AddChild(proximityConflictEvasionSeq);
         root.AddChild(offensiveSeq);
         root.AddChild(traceSeq);
-        //root.AddChild(testSeq);
+        //root.AddChild(attackMotherShipSeq);
+        root.AddChild(wanderSeq);
     }
 
     // Update is called once per frame
