@@ -23,9 +23,6 @@ public class BulletScript : MonoBehaviour {
 		if(SpaceshipController.instance!=null){
 			player = SpaceshipController.instance.transform;
 			ship = SpaceshipController.instance.transform.root;
-		}else{
-			player = SpaceshipController2D.instance.transform;
-			ship = SpaceshipController2D.instance.transform.root;
 		}
 	}
 
@@ -34,15 +31,11 @@ public class BulletScript : MonoBehaviour {
 			if(col.transform.parent==player){
 				if(SpaceshipController.instance!=null){
 					SpaceshipController.instance.Shake();
-				}else{
-					SpaceshipController2D.instance.Shake();
 				}
 			}
 			if (col.GetComponent<DestructionScript> () != null) {
 				if(SpaceshipController.instance!=null){
 					col.GetComponent<DestructionScript> ().HP -= SpaceshipController.instance.m_shooting.bulletSettings.BulletDamage;
-				}else{
-					col.GetComponent<DestructionScript> ().HP -= SpaceshipController2D.instance.m_shooting.bulletSettings.BulletDamage;
 				}
 			}
 			if(col.transform.parent != null){
@@ -50,10 +43,7 @@ public class BulletScript : MonoBehaviour {
 					//col.transform.parent.GetComponent<SpaceshipController> (). HP -= (int)SpaceshipController.instance.m_shooting.bulletSettings.BulletDamage/3;
 					SpaceshipController.instance.m_spaceship.HP-=(int)SpaceshipController.instance.m_shooting.bulletSettings.BulletDamage/3;
 				}
-				if (col.transform.parent.GetComponent<SpaceshipController2D> () != null) {
-					//col.transform.parent.GetComponent<SpaceshipController> (). HP -= (int)SpaceshipController.instance.m_shooting.bulletSettings.BulletDamage/3;
-					SpaceshipController2D.instance.m_spaceship.HP-=(int)SpaceshipController2D.instance.m_shooting.bulletSettings.BulletDamage/3;
-				}
+				
 			}
 			if (col.GetComponent<BasicAI> () != null) {
 				col.GetComponent<BasicAI> ().threat ();
@@ -105,8 +95,6 @@ public class BulletScript : MonoBehaviour {
 	IEnumerator Lifetime(){
 		if(SpaceshipController.instance!=null){
 			yield return new WaitForSeconds (SpaceshipController.instance.m_shooting.bulletSettings.BulletLifetime);
-		}else{
-			yield return new WaitForSeconds (SpaceshipController2D.instance.m_shooting.bulletSettings.BulletLifetime);
 		}
 		Destroy (gameObject);
 	}

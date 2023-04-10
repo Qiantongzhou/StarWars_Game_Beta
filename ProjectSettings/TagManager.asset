@@ -11,6 +11,8 @@ TagManager:
   - Team1
   - Team2
   - Team 2
+  - Missile
+  - screencanvas
   layers:
   - Default
   - TransparentFX
