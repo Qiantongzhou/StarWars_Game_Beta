@@ -28,7 +28,7 @@ public class MoveTowardsTargetNode : ActionNode {
                 Quaternion targetRotation = Quaternion.LookRotation(targetDirection, Vector3.up);
                 rb.MoveRotation(Quaternion.Slerp(rb.rotation, targetRotation, Time.deltaTime * turnSpeed));
                 float distance = targetDirection.magnitude;
-                if (distance > 100f) {
+                if (distance > 30f) {
                     rb.MovePosition(rb.position + btAgent.transform.forward * btAgent.speed * Time.deltaTime);
                 }
             }

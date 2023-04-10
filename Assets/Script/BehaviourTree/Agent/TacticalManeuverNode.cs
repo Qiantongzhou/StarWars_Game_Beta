@@ -5,17 +5,21 @@ using UnityEngine;
 
 public class TacticalManeuverNode : ActionNode
 {
+    private float maneuverTime;
     private AgentBT btAgent;
     private float desired_heading = 90f;
     private float speed;
     private float turn_speed;
     private bool isManeuvering = false;
     private Coroutine tacticalManeuverCoroutine;
+    private Rigidbody rb;
 
-    public TacticalManeuverNode(AgentBT btAgent) {
+    public TacticalManeuverNode(AgentBT btAgent, float maneuverTime) {
         this.btAgent = btAgent;
         speed = btAgent.speed;
         turn_speed = btAgent.turnSpeed;
+        this.maneuverTime = maneuverTime;
+        this.rb = btAgent.GetComponent<Rigidbody>();
     }
 
     public override NodeStatus Execute() {
@@ -39,11 +43,12 @@ public class TacticalManeuverNode : ActionNode
         Quaternion initialRotation = btAgent.transform.rotation;
         Quaternion desiredRotation = btAgent.transform.rotation * Quaternion.Euler(RandomSign()*120f, 90f, 0f);
         float elapsedTime = 0f;
-        float maneuverTime = 0.8f;
+        maneuverTime *= Random.Range(0.9f, 1.3f);
         while (elapsedTime < maneuverTime) {
             float t = elapsedTime / maneuverTime;
             btAgent.transform.rotation = Quaternion.Lerp(initialRotation, desiredRotation, t);
-            btAgent.transform.Translate(Vector3.forward * Time.deltaTime * speed);
+            rb.MovePosition(rb.position + btAgent.transform.forward * speed * Time.deltaTime);
+            //btAgent.transform.Translate(Vector3.forward * Time.deltaTime * speed);
             elapsedTime += Time.deltaTime;
             yield return null;
         }

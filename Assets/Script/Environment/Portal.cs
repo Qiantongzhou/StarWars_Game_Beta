@@ -9,7 +9,7 @@ public class Portal : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (other.CompareTag("Player")|| other.CompareTag("Team1") || other.CompareTag("Team2"))
         {
             _ship = other.transform;
             teleport();
