@@ -61,8 +61,6 @@ public class BasicAI : MonoBehaviour {
 
 		if(!mode2D){
 			player = SpaceshipController.instance.transform;
-		}else{
-			player = SpaceshipController2D.instance.transform;
 		}
 
 

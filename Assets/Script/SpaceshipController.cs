@@ -114,18 +114,7 @@ public sealed class SpaceshipController : MonoBehaviour
 			BulletLifetime = 7f,
 			TargetDistance = 300f
 		},
-		rocketSettings = new RocketSettings{
-			RocketBarrels = new List<GameObject>(),
-			Rocket = null,
-            RocketInitialSpeed = 175f,
-            RocketSpeed = 3.5f,            
-            RocketFireDelay = 1f,
-			RocketDamage = 200f,
-			RocketLifetime = 7f,
-			RocketTurningSpeed = 40f,
-			LockOnDistance = 700f,
-			RocketOffsetLimit = new Vector3(250f,250f,250f)
-		}
+		
 	};
 
 	//singleton
@@ -169,17 +158,17 @@ public sealed class SpaceshipController : MonoBehaviour
 
 	private void LateUpdate(){
 
-        if (m_spaceship.HP_text!= null) m_spaceship.HP_text.text = m_spaceship.HP.ToString();
-        if (m_spaceship.enemies_text!= null) m_spaceship.enemies_text.text = m_spaceship.enemies.Count.ToString();
+  //      if (m_spaceship.HP_text!= null) m_spaceship.HP_text.text = m_spaceship.HP.ToString();
+  //      if (m_spaceship.enemies_text!= null) m_spaceship.enemies_text.text = m_spaceship.enemies.Count.ToString();
 
-        if (m_spaceship.enemies.Count==0){
-			//UIcoroutines.instance.GameOver(false);
-		}
+  //      if (m_spaceship.enemies.Count==0){
+		//	UIcoroutines.instance.GameOver(false);
+		//}
 
-		if(m_spaceship.HP<=0){
-			UIcoroutines.instance.GameOver(true);
-			gameObject.SetActive(false);
-		}
+		//if(m_spaceship.HP<=0){
+		//	UIcoroutines.instance.GameOver(true);
+		//	gameObject.SetActive(false);
+		//}
 
 			//Bullets on LMB
 		if (Input.GetMouseButtonDown (0) && !isShooting) {
@@ -193,41 +182,41 @@ public sealed class SpaceshipController : MonoBehaviour
 
 		//Rockets on RMB
 		
-		Ray ray;
-		if(m_camera.TargetCamera.targetTexture == null){
-			ray = m_camera.TargetCamera.ScreenPointToRay( Input.mousePosition );
-		}else{
-			//EVERYTHING MUST BE A FLOAT
-			ray = m_camera.TargetCamera.ScreenPointToRay(Input.mousePosition/(float)((float)Screen.height/(float)m_camera.TargetCamera.pixelHeight) );
-		}
+		//Ray ray;
+		//if(m_camera.TargetCamera.targetTexture == null){
+		//	ray = m_camera.TargetCamera.ScreenPointToRay( Input.mousePosition );
+		//}else{
+		//	//EVERYTHING MUST BE A FLOAT
+		//	ray = m_camera.TargetCamera.ScreenPointToRay(Input.mousePosition/(float)((float)Screen.height/(float)m_camera.TargetCamera.pixelHeight) );
+		//}
 		
-		RaycastHit hit;
+		//RaycastHit hit;
 
-		if (Physics.Raycast (ray, out hit, m_shooting.rocketSettings.LockOnDistance)) {
-			if (hit.transform != transform && Vector3.Distance(transform.position, hit.point) > 10f) {
-				rocket_target = hit.transform;
-				if(m_camera.aimingCursor!=null){
-					Cursor.SetCursor(m_camera.aimingCursor, new Vector2(m_camera.aimingCursor.width * 0.5f, m_camera.aimingCursor.height * 0.5f), CursorMode.Auto);
-				}
-			} else {
-				rocket_target = null;
-				if(m_camera.normalCursor!=null){
-					Cursor.SetCursor(m_camera.normalCursor, new Vector2(m_camera.normalCursor.width * 0.5f, m_camera.normalCursor.height * 0.5f), CursorMode.Auto);
-				}
-			}
-		} else {
-			if(m_camera.normalCursor!=null){
-				Cursor.SetCursor(m_camera.normalCursor, new Vector2(m_camera.normalCursor.width * 0.5f, m_camera.normalCursor.height * 0.5f), CursorMode.Auto);
-			}
-			rocket_target = null;
-		}
+		//if (Physics.Raycast (ray, out hit, m_shooting.rocketSettings.LockOnDistance)) {
+		//	if (hit.transform != transform && Vector3.Distance(transform.position, hit.point) > 10f) {
+		//		rocket_target = hit.transform;
+		//		if(m_camera.aimingCursor!=null){
+		//			Cursor.SetCursor(m_camera.aimingCursor, new Vector2(m_camera.aimingCursor.width * 0.5f, m_camera.aimingCursor.height * 0.5f), CursorMode.Auto);
+		//		}
+		//	} else {
+		//		rocket_target = null;
+		//		if(m_camera.normalCursor!=null){
+		//			Cursor.SetCursor(m_camera.normalCursor, new Vector2(m_camera.normalCursor.width * 0.5f, m_camera.normalCursor.height * 0.5f), CursorMode.Auto);
+		//		}
+		//	}
+		//} else {
+		//	if(m_camera.normalCursor!=null){
+		//		Cursor.SetCursor(m_camera.normalCursor, new Vector2(m_camera.normalCursor.width * 0.5f, m_camera.normalCursor.height * 0.5f), CursorMode.Auto);
+		//	}
+		//	rocket_target = null;
+		//}
 
-		if (Input.GetMouseButtonDown (1) && !isFiring) {
+		//if (Input.GetMouseButtonDown (1) && !isFiring) {
 
-			firing = StartCoroutine (RocketFiring(m_shooting,rocket_target));
-			isFiring = true;
+		//	firing = StartCoroutine (RocketFiring(m_shooting,rocket_target));
+		//	isFiring = true;
 
-		}
+		//}
 		/*if (Input.GetMouseButtonUp (1) && isFiring) {
 			StopCoroutine (firing);
 			isFiring = false;
@@ -434,6 +423,7 @@ public sealed class SpaceshipController : MonoBehaviour
 		GameObject bullet;
 		Vector3 p; 
 		while(true){
+			print("firing");
 			for (int i = b; i < settings.bulletSettings.BulletBarrels.Count; i++) {
 				bullet = (GameObject)Instantiate (settings.bulletSettings.Bullet,settings.bulletSettings.BulletBarrels[i].transform.position, Quaternion.LookRotation(transform.forward,transform.up));
 				if( settings.bulletSettings.BulletBarrels.Count > 1){
@@ -448,16 +438,14 @@ public sealed class SpaceshipController : MonoBehaviour
 					settings.bulletSettings.BulletBarrels[i].GetComponent<ParticleSystem>().Play();
 
 				}
-				if(m_camera.TargetCamera.targetTexture == null){
-					p = m_camera.TargetCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, settings.bulletSettings.TargetDistance));
-				}else{
-					//EVERYTHING MUST BE A FLOAT
-					p = m_camera.TargetCamera.ScreenToWorldPoint(new Vector3((float)Input.mousePosition.x/(float)((float)Screen.height/(float)m_camera.TargetCamera.pixelHeight), (float)Input.mousePosition.y/(float)((float)Screen.height/(float)m_camera.TargetCamera.pixelHeight), settings.bulletSettings.TargetDistance));
-				}
-				if(m_shooting.mode2D){
-					p.y = 0f;
-				}
-				bullet.transform.LookAt (p);
+				//if(m_camera.TargetCamera.targetTexture == null){
+				//	p = m_camera.TargetCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, settings.bulletSettings.TargetDistance));
+				//}else{
+				//	//EVERYTHING MUST BE A FLOAT
+				//	p = m_camera.TargetCamera.ScreenToWorldPoint(new Vector3((float)Input.mousePosition.x/(float)((float)Screen.height/(float)m_camera.TargetCamera.pixelHeight), (float)Input.mousePosition.y/(float)((float)Screen.height/(float)m_camera.TargetCamera.pixelHeight), settings.bulletSettings.TargetDistance));
+				//}
+				
+				//bullet.transform.LookAt (p);
 				bullet.GetComponent<Rigidbody> ().AddForce (bullet.transform.forward*settings.bulletSettings.BulletSpeed,ForceMode.Impulse);
 				yield return new WaitForSeconds(settings.bulletSettings.BulletFireDelay);
 			}
@@ -465,35 +453,7 @@ public sealed class SpaceshipController : MonoBehaviour
 		}
 	}
 
-	private IEnumerator RocketFiring(ShootingSettings settings, Transform target){        
-		int barrel;
-		GameObject rocket;
-		Vector3 p;
-		barrel = UnityEngine.Random.Range (0, settings.rocketSettings.RocketBarrels.Count - 1);
-		rocket = (GameObject)Instantiate (settings.rocketSettings.Rocket, settings.rocketSettings.RocketBarrels [barrel].transform.position, Quaternion.LookRotation (transform.forward, transform.up));
-		if(m_camera.TargetCamera.targetTexture == null){
-					p = m_camera.TargetCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, settings.bulletSettings.TargetDistance));
-				}else{
-					//EVERYTHING MUST BE A FLOAT
-					p = m_camera.TargetCamera.ScreenToWorldPoint(new Vector3((float)Input.mousePosition.x/(float)((float)Screen.height/(float)m_camera.TargetCamera.pixelHeight), (float)Input.mousePosition.y/(float)((float)Screen.height/(float)m_camera.TargetCamera.pixelHeight), settings.bulletSettings.TargetDistance));
-				}
-		if (rocket.GetComponent<RocketScript> () != null && target != null) {
-			rocket.transform.LookAt(target.position +  new Vector3(UnityEngine.Random.Range(-m_shooting.rocketSettings.RocketOffsetLimit.x,m_shooting.rocketSettings.RocketOffsetLimit.x),
-			UnityEngine.Random.Range(-m_shooting.rocketSettings.RocketOffsetLimit.y,m_shooting.rocketSettings.RocketOffsetLimit.y),
-			UnityEngine.Random.Range(-m_shooting.rocketSettings.RocketOffsetLimit.z,m_shooting.rocketSettings.RocketOffsetLimit.z)));            
-            //rocket.GetComponent<Rigidbody>().AddForce(rocket.transform.forward * settings.rocketSettings.RocketInitialSpeed, ForceMode.Impulse);
-            rocket.GetComponent<RocketScript>().StartChase(target, settings.rocketSettings.RocketSpeed,settings.rocketSettings.RocketInitialSpeed);
-        }
-        else{
-			if(m_shooting.mode2D){
-					p.y = 0f;
-			}
-			rocket.transform.LookAt (p);
-			rocket.GetComponent<Rigidbody>().AddForce (rocket.transform.forward * settings.rocketSettings.RocketInitialSpeed, ForceMode.Impulse);
-		}
-		yield return new WaitForSeconds(settings.rocketSettings.RocketFireDelay);
-		isFiring = false;
-	}
+
 
 	[Serializable]
 	private struct CameraLookAtPointOffsetSettings
@@ -586,7 +546,7 @@ public sealed class SpaceshipController : MonoBehaviour
 	{
 		[Tooltip("2D shooting mode")] public bool mode2D;
 		[Tooltip("The bullet settings.")] public BulletSettings bulletSettings;
-		[Tooltip("The rocket settings.")] public RocketSettings rocketSettings;
+		
 	
 	}
 
@@ -603,20 +563,5 @@ public sealed class SpaceshipController : MonoBehaviour
 	
 	}
 
-	[Serializable]
-	public struct RocketSettings
-	{
-		[Tooltip("The origin point(s) of rockets.")] public List<GameObject> RocketBarrels;
-		[Tooltip("The rocket prefab.")] public GameObject Rocket;
-        [Tooltip("The rocket initial speed.")] public float RocketInitialSpeed;
-        [Tooltip("The rocket chasing speed.")] public float RocketSpeed;
-		[Tooltip("The rocket firing delay.")] public float RocketFireDelay;
-		[Tooltip("The rocket damage.")] public float RocketDamage;
-		[Tooltip("How long before the rocket disappears.")] public float RocketLifetime;
-		[Tooltip("How fast does the rocket turn.")] public float RocketTurningSpeed;
-		[Tooltip("Max distance of rocket lock-on")] public float LockOnDistance;
-		[Tooltip("Rocket start offset, random range")] public Vector3 RocketOffsetLimit;
-	
-	}
 
 }

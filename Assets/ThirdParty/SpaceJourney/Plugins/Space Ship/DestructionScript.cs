@@ -26,10 +26,6 @@ public class DestructionScript : MonoBehaviour {
 			if(SpaceshipController.instance.m_spaceship.enemies.Contains(gameObject)){
 				SpaceshipController.instance.m_spaceship.enemies.Remove(gameObject);
 			}
-		}else{
-			if(SpaceshipController2D.instance.m_spaceship.enemies.Contains(gameObject)){
-				SpaceshipController2D.instance.m_spaceship.enemies.Remove(gameObject);
-			}
 		}
 
 		if(GetComponent<BasicAI>()!=null){

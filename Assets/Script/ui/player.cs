@@ -48,8 +48,12 @@ public class player : MonoBehaviour
     float timecaculate;
     void Awake()
     {
+        attr.movespeed =Mathf.FloorToInt(GameSetting.plane_info[GameSetting.currentplayerplane]["Speed"]);
+        attr.attackdamage= Mathf.FloorToInt(GameSetting.plane_info[GameSetting.currentplayerplane]["Damage"]);
+        attr.healthpoint = Mathf.FloorToInt(GameSetting.plane_info[GameSetting.currentplayerplane]["Health"]);
+        
         gamesaving = GameObject.Find("gamesaving").GetComponent<gamesaving>();
-        canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
+        canvas = GameObject.FindGameObjectWithTag("screencanvas").GetComponent<Canvas>();
         //attr// = GetComponent<Attributes>();
         equipAttr = gameObject.AddComponent<Attributes>();
         skillAttr = gameObject.AddComponent<Attributes>();
@@ -68,12 +72,9 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        ResultAttr.SetZero();
-        ResultAttr += attr; 
-        ResultAttr += equipAttr;
-        ResultAttr += skillAttr;
+       
 
-        TMP_Text[] j = GameObject.Find("Canvas").GetComponent<Canvas>().GetComponentsInChildren<TMP_Text>();
+        TMP_Text[] j = GameObject.FindGameObjectWithTag("screencanvas").GetComponent<Canvas>().GetComponentsInChildren<TMP_Text>();
         //j[3].text = "Gem:"+gems.ToString();
         //j[4].text = "Gold:"+Mathf.FloorToInt(gold).ToString();
 
@@ -105,8 +106,13 @@ public class player : MonoBehaviour
     }
     private void FixedUpdate()
     {
+        ResultAttr.SetZero();
+        ResultAttr += attr;
+        ResultAttr += equipAttr;
+        ResultAttr += skillAttr;
         gems = int.Parse(gamesaving.getGameSavingGems());
         healthregenpersec();
+        setplayercontroller();
     }
     private void healthregenpersec()
     {
@@ -118,6 +124,15 @@ public class player : MonoBehaviour
                 currenthealth = currenthealth + ResultAttr.healthregen;
                 timecaculate = 0.0f;
             }
+        }
+    }
+    //costom
+    public void setplayercontroller()
+    {
+        if(transform.GetComponent<SpaceshipController>() != null)
+        {
+            SpaceshipController controller = transform.GetComponent<SpaceshipController>();
+            controller.m_spaceship.SpeedRange = new Vector2(30, ResultAttr.movespeed);
         }
     }
     public void takedamage(int dam)
@@ -174,4 +189,8 @@ public class player : MonoBehaviour
     {
         attr += newAttr;
     }*/
+    private void OnCollisionEnter(Collision collision)
+    {
+        takedamage(5);
+    }
 }

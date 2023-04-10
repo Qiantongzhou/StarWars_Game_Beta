@@ -18,7 +18,7 @@ public static class GameSetting
                     {
                         { "Health",100f},
                         { "Damage",10f},
-                        { "Speed",10f},
+                        { "Speed",200f},
 
                     }
             },
@@ -27,7 +27,7 @@ public static class GameSetting
                     {
                         { "Health",150f},
                         { "Damage",11f},
-                        { "Speed",6f},
+                        { "Speed",120f},
 
                     }
             },
@@ -36,7 +36,7 @@ public static class GameSetting
              {
                  { "Health",100f},
                  { "Damage",8f},
-                 { "Speed",11f},
+                 { "Speed",110f},
 
              }
         },{
@@ -44,12 +44,33 @@ public static class GameSetting
          {
              { "Health",70f},
              { "Damage",15f},
-             { "Speed",15f},
+             { "Speed",350f},
 
          } 
     }
 };
+    public static Dictionary<int, Dictionary<string, float>> agent_info =
+        new Dictionary<int, Dictionary<string, float>>() {
+            {
+                    0,new Dictionary<string, float>
+                    {
+                        { "Health",100f},
+                        { "Damage",10f},
+                        { "Speed",200f},
 
+                    }
+            },{
+                    1,new Dictionary<string, float>
+                    {
+                        { "Health",1000f},
+                        { "Damage",10f},
+                        { "Speed",200f},
+
+                    }
+            },
+
+
+};
     //===========================================================================
     public static int currentplayerplane=0; 
 }
