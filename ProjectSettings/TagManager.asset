@@ -10,6 +10,7 @@ TagManager:
   - entity
   - Team1
   - Team2
+  - Team 2
   layers:
   - Default
   - TransparentFX

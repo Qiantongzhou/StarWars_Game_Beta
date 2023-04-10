@@ -19,7 +19,7 @@ public class Hologram : MonoBehaviour {
 	}
 	
 	void Update () {
-		camDistance = Vector3.Distance(Camera.main.transform.position, this.transform.position);
+		camDistance = Vector3.Distance(Camera.allCameras[0].transform.position, this.transform.position);
 		
 		offset.x += Time.deltaTime*speedOffset.x;
 		offset.y += Time.deltaTime*speedOffset.y;
