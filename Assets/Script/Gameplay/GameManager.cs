@@ -9,10 +9,12 @@ public class GameManager : MonoBehaviour
     // Team 1
     public GameObject team1Base;
     public GameObject team1WinUI;
+    public GameObject team1ShipPrefab;
 
     // Team 2
     public GameObject team2Base;
     public GameObject team2WinUI;
+    public GameObject team2ShipPrefab;
 
 
     public GameObject tieUI;
