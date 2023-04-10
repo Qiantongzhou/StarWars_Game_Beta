@@ -132,17 +132,6 @@ MonoBehaviour:
       BulletDamage: 15
       BulletLifetime: 7
       TargetDistance: 300
-    rocketSettings:
-      RocketBarrels: []
-      Rocket: {fileID: 0}
-      RocketInitialSpeed: 175
-      RocketSpeed: 3.5
-      RocketFireDelay: 1
-      RocketDamage: 200
-      RocketLifetime: 7
-      RocketTurningSpeed: 40
-      LockOnDistance: 700
-      RocketOffsetLimit: {x: 250, y: 250, z: 250}
 --- !u!54 &862435025513397713
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5199,7 +5188,7 @@ GameObject:
   - component: {fileID: 6958849265917849871}
   - component: {fileID: 6958849265937249137}
   - component: {fileID: 6958849265937623519}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9969,7 +9958,7 @@ GameObject:
   - component: {fileID: 6958849265917852495}
   - component: {fileID: 6958849265920664111}
   - component: {fileID: 6958849265920105017}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ship_1_FrontEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10052,7 +10041,7 @@ GameObject:
   - component: {fileID: 6958849265917761917}
   - component: {fileID: 6958849265937277525}
   - component: {fileID: 6958849265937582429}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14822,7 +14811,7 @@ GameObject:
   - component: {fileID: 6958849265917885483}
   - component: {fileID: 6958849265937198859}
   - component: {fileID: 6958849265937583791}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19592,7 +19581,7 @@ GameObject:
   - component: {fileID: 6958849265917884885}
   - component: {fileID: 6958849265937210811}
   - component: {fileID: 6958849265937673069}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24362,7 +24351,7 @@ GameObject:
   - component: {fileID: 6958849265917872793}
   - component: {fileID: 6958849265937237597}
   - component: {fileID: 6958849265937585805}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29130,7 +29119,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6958849265917844961}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29172,7 +29161,7 @@ GameObject:
   - component: {fileID: 6958849265917808815}
   - component: {fileID: 6958849265937212165}
   - component: {fileID: 6958849265937580377}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33942,7 +33931,7 @@ GameObject:
   - component: {fileID: 6958849265917823445}
   - component: {fileID: 6958849265937246685}
   - component: {fileID: 6958849265937627441}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38712,7 +38701,7 @@ GameObject:
   - component: {fileID: 6958849265917841743}
   - component: {fileID: 6958849265937220073}
   - component: {fileID: 6958849265937678131}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43482,7 +43471,7 @@ GameObject:
   - component: {fileID: 6958849265917790707}
   - component: {fileID: 6958849265937196677}
   - component: {fileID: 6958849265937614673}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48252,7 +48241,7 @@ GameObject:
   - component: {fileID: 6958849265917822113}
   - component: {fileID: 6958849265920691823}
   - component: {fileID: 6958849265919606123}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ship_1_Engines 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48335,7 +48324,7 @@ GameObject:
   - component: {fileID: 8970172723808022480}
   m_Layer: 6
   m_Name: juggernaut
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48366,6 +48355,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 862435027049238506}
     m_Modifications:
+    - target: {fileID: 944611545045315552, guid: 7a2bcac04c6eb3345b5147853166084e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3938328832352296593, guid: 7a2bcac04c6eb3345b5147853166084e, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -48426,9 +48419,37 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3955083819205342718, guid: 7a2bcac04c6eb3345b5147853166084e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 4461960677224465451, guid: 7a2bcac04c6eb3345b5147853166084e, type: 3}
       propertyPath: m_Name
       value: ship1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4461960677224465451, guid: 7a2bcac04c6eb3345b5147853166084e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4461960677224465451, guid: 7a2bcac04c6eb3345b5147853166084e, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4556375632899910387, guid: 7a2bcac04c6eb3345b5147853166084e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5655953921701596178, guid: 7a2bcac04c6eb3345b5147853166084e, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5655953921701596178, guid: 7a2bcac04c6eb3345b5147853166084e, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 6466954079579067045, guid: 7a2bcac04c6eb3345b5147853166084e, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7a2bcac04c6eb3345b5147853166084e, type: 3}

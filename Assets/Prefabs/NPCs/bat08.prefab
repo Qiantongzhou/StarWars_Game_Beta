@@ -29,7 +29,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6006416012434903555}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3430418692506167427
 GameObject:
@@ -42,7 +42,7 @@ GameObject:
   - component: {fileID: 2652790659433427513}
   m_Layer: 6
   m_Name: bat08
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,8 +194,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1065334708360949673}
   - {fileID: 540378555440367482}
+  - {fileID: 1065334708360949673}
   m_Father: {fileID: 2652790659433427513}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -291,17 +291,6 @@ MonoBehaviour:
       BulletDamage: 15
       BulletLifetime: 7
       TargetDistance: 300
-    rocketSettings:
-      RocketBarrels: []
-      Rocket: {fileID: 0}
-      RocketInitialSpeed: 175
-      RocketSpeed: 3.5
-      RocketFireDelay: 1
-      RocketDamage: 200
-      RocketLifetime: 7
-      RocketTurningSpeed: 40
-      LockOnDistance: 700
-      RocketOffsetLimit: {x: 250, y: 250, z: 250}
 --- !u!54 &6006416012913532984
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5234,7 +5223,7 @@ GameObject:
   - component: {fileID: 6817656826699399007}
   - component: {fileID: 6817656826679930449}
   - component: {fileID: 6817656826681141403}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10004,7 +9993,7 @@ GameObject:
   - component: {fileID: 6817656826699404605}
   - component: {fileID: 6817656826679976971}
   - component: {fileID: 6817656826681160343}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14774,7 +14763,7 @@ GameObject:
   - component: {fileID: 6817656826699376659}
   - component: {fileID: 6817656826679979867}
   - component: {fileID: 6817656826681125685}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19544,7 +19533,7 @@ GameObject:
   - component: {fileID: 6817656826699384197}
   - component: {fileID: 6817656826679921009}
   - component: {fileID: 6817656826681140157}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24314,7 +24303,7 @@ GameObject:
   - component: {fileID: 6817656826699437533}
   - component: {fileID: 6817656826698112225}
   - component: {fileID: 6817656826697038743}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EnginesFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24397,7 +24386,7 @@ GameObject:
   - component: {fileID: 6817656826699374593}
   - component: {fileID: 6817656826679974035}
   - component: {fileID: 6817656826681141837}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29167,7 +29156,7 @@ GameObject:
   - component: {fileID: 6817656826699399271}
   - component: {fileID: 6817656826679984615}
   - component: {fileID: 6817656826680021787}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -33937,7 +33926,7 @@ GameObject:
   - component: {fileID: 6817656826699351117}
   - component: {fileID: 6817656826679975855}
   - component: {fileID: 6817656826680046275}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38707,7 +38696,7 @@ GameObject:
   - component: {fileID: 6817656826699383853}
   - component: {fileID: 6817656826679984339}
   - component: {fileID: 6817656826681120167}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43477,7 +43466,7 @@ GameObject:
   - component: {fileID: 6817656826699413397}
   - component: {fileID: 6817656826679977663}
   - component: {fileID: 6817656826681102543}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48247,7 +48236,7 @@ GameObject:
   - component: {fileID: 6817656826699324095}
   - component: {fileID: 6817656826680040089}
   - component: {fileID: 6817656826680042407}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53017,7 +53006,7 @@ GameObject:
   - component: {fileID: 6817656826699376477}
   - component: {fileID: 6817656826679977517}
   - component: {fileID: 6817656826681148311}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57787,7 +57776,7 @@ GameObject:
   - component: {fileID: 6817656826699348365}
   - component: {fileID: 6817656826679994475}
   - component: {fileID: 6817656826681102079}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62557,7 +62546,7 @@ GameObject:
   - component: {fileID: 6817656826699359533}
   - component: {fileID: 6817656826698045887}
   - component: {fileID: 6817656826697023735}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: EnginesBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -62640,7 +62629,7 @@ GameObject:
   - component: {fileID: 6817656826699334959}
   - component: {fileID: 6817656826679944113}
   - component: {fileID: 6817656826681108043}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67410,7 +67399,7 @@ GameObject:
   - component: {fileID: 6817656826699376393}
   - component: {fileID: 6817656826679992879}
   - component: {fileID: 6817656826680032473}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72180,7 +72169,7 @@ GameObject:
   - component: {fileID: 6817656826699395319}
   - component: {fileID: 6817656826679990565}
   - component: {fileID: 6817656826681152219}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76950,7 +76939,7 @@ GameObject:
   - component: {fileID: 6817656826699317295}
   - component: {fileID: 6817656826679952047}
   - component: {fileID: 6817656826681148661}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -81720,7 +81709,7 @@ GameObject:
   - component: {fileID: 6817656826699358713}
   - component: {fileID: 6817656826679951245}
   - component: {fileID: 6817656826681121189}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -86490,7 +86479,7 @@ GameObject:
   - component: {fileID: 6817656826699369189}
   - component: {fileID: 6817656826679989793}
   - component: {fileID: 6817656826681196381}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -91260,7 +91249,7 @@ GameObject:
   - component: {fileID: 6817656826699342803}
   - component: {fileID: 6817656826679973191}
   - component: {fileID: 6817656826680026107}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96028,7 +96017,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6817656826699381135}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ParticleEngines
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96076,9 +96065,13 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6006416012434903555}
     m_Modifications:
+    - target: {fileID: 66471598609950262, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 472283158451046020, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 472283158451046020, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
       propertyPath: m_LocalScale.x
@@ -96132,9 +96125,97 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 489034134895160811, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 992537578998570046, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
       propertyPath: m_Name
       value: ship3
+      objectReference: {fileID: 0}
+    - target: {fileID: 992537578998570046, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 992537578998570046, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1085751567915217638, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2466689965690543704, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2969379498751724267, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3001038534756607971, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3479379967282412223, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3994371470759793436, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4185760780023172530, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4187371453868741421, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4409530915307321333, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4577467992060171455, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4645630462913028721, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4696023468341947804, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5860086375426948911, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7608020456838564528, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7815856067779271259, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8381592263533097667, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9103989345489392647, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9103989345489392647, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 9218093019309248905, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dc58465e13080ff4a810ea8b16dc6d73, type: 3}

@@ -133,17 +133,6 @@ MonoBehaviour:
       BulletDamage: 15
       BulletLifetime: 7
       TargetDistance: 300
-    rocketSettings:
-      RocketBarrels: []
-      Rocket: {fileID: 0}
-      RocketInitialSpeed: 175
-      RocketSpeed: 3.5
-      RocketFireDelay: 1
-      RocketDamage: 200
-      RocketLifetime: 7
-      RocketTurningSpeed: 40
-      LockOnDistance: 700
-      RocketOffsetLimit: {x: 250, y: 250, z: 250}
 --- !u!114 &2790030258444656097
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57681,7 +57670,7 @@ GameObject:
   - component: {fileID: 5851202011271376067}
   m_Layer: 6
   m_Name: stardestoryer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -58340,6 +58329,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2790030258450451705}
     m_Modifications:
+    - target: {fileID: 591532264597093628, guid: 8a566281769b2fe42b6da5affb1cf338, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3713681281425132941, guid: 8a566281769b2fe42b6da5affb1cf338, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -58403,6 +58396,22 @@ PrefabInstance:
     - target: {fileID: 4089961014641858359, guid: 8a566281769b2fe42b6da5affb1cf338, type: 3}
       propertyPath: m_Name
       value: Blender249_modify
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089961014641858359, guid: 8a566281769b2fe42b6da5affb1cf338, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4089961014641858359, guid: 8a566281769b2fe42b6da5affb1cf338, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5427849548092743438, guid: 8a566281769b2fe42b6da5affb1cf338, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5427849548092743438, guid: 8a566281769b2fe42b6da5affb1cf338, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a566281769b2fe42b6da5affb1cf338, type: 3}

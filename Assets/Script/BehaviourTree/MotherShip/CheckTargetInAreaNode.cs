@@ -31,6 +31,7 @@ public class CheckTargetInAreaNode : ConditionNode {
         float closestDistance = Mathf.Infinity;
 
         foreach (Collider col in colliders) {
+            if(col.gameObject.name == "MotherShip") { continue; }
             if (!CheckObstacleBetween(col.gameObject)) {
                 float distance = Vector3.Distance(msbt.transform.position, col.transform.position);
                 if (distance < closestDistance) {
@@ -42,7 +43,7 @@ public class CheckTargetInAreaNode : ConditionNode {
 
         if (closestEnemy != null) {
             if (closestEnemy.gameObject.CompareTag("Player")) {
-                msbt.target = closestEnemy.gameObject.transform.parent;
+                msbt.target = closestEnemy.gameObject.transform;
             }
             else {
                 msbt.target = closestEnemy.gameObject.transform.parent.parent;
