@@ -25,7 +25,8 @@ public class CheckEnemyInConeNode : ConditionNode {
         else {
             timer += Time.deltaTime;
             if (timer >= clearTargetInterval) {
-                btAgent.target = null; 
+                btAgent.target = null;
+                timer = 0f;
             }
             return NodeStatus.FAILURE;
         }
@@ -53,10 +54,13 @@ public class CheckEnemyInConeNode : ConditionNode {
                 continue;
             }
             // then col is enemy agent;
+            
             Vector3 directionToTarget = col.transform.position - btAgent.transform.position;
             Vector3 forward = btAgent.transform.forward;
 
             float distance = directionToTarget.magnitude;
+
+            // this angle is to check if the target is in the cone
             float angle = Vector3.Angle(directionToTarget, forward);
 
             // check in Cone

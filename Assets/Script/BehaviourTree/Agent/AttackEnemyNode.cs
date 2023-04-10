@@ -9,27 +9,28 @@ public class AttackEnemyNode : ActionNode
     private float lastExecutedTime = 0f;
     private float executionInterval = 0.1f;
     private bool isFirstExecution = true;
-    private GameObject misslePrefab;
 
     public AttackEnemyNode(AgentBT btAgent, GameObject misslePrefab) {
         this.btAgent = btAgent;
-        this.misslePrefab = misslePrefab;
     }
 
     public override NodeStatus Execute() {
-        if (isFirstExecution) {
-            isFirstExecution = false;
-            Fire();
-        }
-        if (Time.time - lastExecutedTime > executionInterval) {
-            Fire();
-            lastExecutedTime = Time.time;
+        Vector3 directionToTarget = btAgent.target.position - btAgent.transform.position;
+        float angle = Vector3.Angle(btAgent.transform.forward, directionToTarget);
+        if (angle < 30f) {
+            if (isFirstExecution) {
+                isFirstExecution = false;
+                Fire();
+            }
+            if (Time.time - lastExecutedTime > executionInterval) {
+                Fire();
+                lastExecutedTime = Time.time;
+            }
         }
         return NodeStatus.SUCCESS;
     }
 
     public void Fire() {
-        Debug.DrawLine(btAgent.missleLauncher.position, btAgent.missleLauncher.position + btAgent.missleLauncher.TransformDirection(Vector3.forward), Color.red, 0.1f);
         if (btAgent != null) {
             GameObject missle = AgentBT.Instantiate(btAgent.misslePrefab, btAgent.missleLauncher.position, btAgent.missleLauncher.rotation);
             missle.GetComponent<Missle>().target = btAgent.target;
