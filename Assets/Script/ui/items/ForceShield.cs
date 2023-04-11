@@ -7,6 +7,7 @@ public class ForceShield : EnhancementSkill
     public override string Name => "ForceShield";
     public override string Description => "protect";
     public AudioClip clip;
+    public float cooldowntime=10f;
     //AudioSource source;
     public GameObject Sheildprefab;
     public GameObject[] underShield;
@@ -53,10 +54,11 @@ public class ForceShield : EnhancementSkill
         CreateForceField(player.transform);
         active = true;
         cooldown = true;
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(cooldowntime);
         DestroyForceField();
         active = false;
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(cooldowntime);
+       
         cooldown = false;
     }
     private void Update()

@@ -10,20 +10,26 @@ public class javalinmissile : EnhancementSkill
     public AudioClip clip;
     //AudioSource source;
     public GameObject missileprefab;
-    //bool startcount = false;
+    bool startcount = false;
     //float count = 0;
     // Start is called before the first frame update
     public override void DoAction()
     {
-      GameObject player=  GameObject.FindWithTag("Player");
-        
-       GameObject temp= Instantiate(missileprefab, player.transform.GetChild(1).transform.position, Quaternion.identity);
-        temp.transform.localScale=temp.transform.localScale*10;
-        temp.transform.localRotation = player.transform.GetChild(1).transform.rotation;
+      if(!startcount)
+        {
+            StartCoroutine(firemissile());
+        }
     }
-        // Update is called once per frame
-        void Update()
+    IEnumerator firemissile()
     {
-        
+        startcount = true;
+        GameObject player = GameObject.FindWithTag("Player");
+
+        GameObject temp = Instantiate(missileprefab, player.transform.GetChild(1).transform.position, Quaternion.identity);
+        temp.transform.localScale = temp.transform.localScale * 10;
+        temp.transform.localRotation = player.transform.GetChild(1).transform.rotation;
+        yield return new WaitForSeconds(1);
+        startcount = false;
     }
+      
 }
