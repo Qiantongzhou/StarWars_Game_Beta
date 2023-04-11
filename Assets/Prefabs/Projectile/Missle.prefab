@@ -131,7 +131,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
-  missleDmg: 10
+  missleSender: {fileID: 0}
+  missleDmg: 1
   frequency: 0.1
   speed: 100
   rotationSpeed: 15

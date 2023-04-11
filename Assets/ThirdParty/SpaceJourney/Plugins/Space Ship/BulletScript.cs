@@ -8,8 +8,9 @@ public class BulletScript : MonoBehaviour {
 	public GameObject HitEffect;
 	public ParticleSystem Trail;
 	public Transform ship;
+    public int bulletDmg = 1;
 
-	Transform player;
+    Transform player;
 
 	//float Damage;
 
@@ -33,22 +34,43 @@ public class BulletScript : MonoBehaviour {
 					SpaceshipController.instance.Shake();
 				}
 			}
-			if (col.GetComponent<DestructionScript> () != null) {
-				if(SpaceshipController.instance!=null){
-					col.GetComponent<DestructionScript> ().HP -= SpaceshipController.instance.m_shooting.bulletSettings.BulletDamage;
-				}
-			}
-			if(col.transform.parent != null){
-				if (col.transform.parent.GetComponent<SpaceshipController> () != null) {
-					//col.transform.parent.GetComponent<SpaceshipController> (). HP -= (int)SpaceshipController.instance.m_shooting.bulletSettings.BulletDamage/3;
-					SpaceshipController.instance.m_spaceship.HP-=(int)SpaceshipController.instance.m_shooting.bulletSettings.BulletDamage/3;
-				}
-				
-			}
-			if (col.GetComponent<BasicAI> () != null) {
-				col.GetComponent<BasicAI> ().threat ();
-			}
-			StartCoroutine (DestroySequence (col.gameObject));
+            //if (col.GetComponent<DestructionScript> () != null) {
+            //	if(SpaceshipController.instance!=null){
+            //		col.GetComponent<DestructionScript> ().HP -= SpaceshipController.instance.m_shooting.bulletSettings.BulletDamage;
+            //	}
+            //}
+            //if(col.transform.parent != null){
+            //	if (col.transform.parent.GetComponent<SpaceshipController> () != null) {
+            //		//col.transform.parent.GetComponent<SpaceshipController> (). HP -= (int)SpaceshipController.instance.m_shooting.bulletSettings.BulletDamage/3;
+            //		SpaceshipController.instance.m_spaceship.HP-=(int)SpaceshipController.instance.m_shooting.bulletSettings.BulletDamage/3;
+            //	}
+
+            //}
+            //if (col.GetComponent<BasicAI> () != null) {
+            //	col.GetComponent<BasicAI> ().threat ();
+            //}
+
+
+            if (col.CompareTag("Missile")) {
+                return;
+            }
+            if (col.gameObject.layer == LayerMask.NameToLayer("Agent")) {
+
+
+                if (col.tag != "Player") {
+                    if (col.name == "MotherShip") {
+                        col.GetComponent<mothershiphealth>().takedamage(bulletDmg);
+                    }
+                    else {
+                        col.GetComponent<AgentHealth>().takedamage(bulletDmg);
+                    }
+                }
+                else {
+                    col.GetComponent<player>().takedamage(bulletDmg);
+                }
+            }
+
+            StartCoroutine (DestroySequence (col.gameObject));
 		}
 	}
 

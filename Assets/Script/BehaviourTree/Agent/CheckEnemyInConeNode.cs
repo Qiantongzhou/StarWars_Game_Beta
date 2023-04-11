@@ -50,7 +50,7 @@ public class CheckEnemyInConeNode : ConditionNode {
             if (col.CompareTag(btAgent.tag)) {
                 continue;
             }
-            if (!col.CompareTag("Team1") && !col.CompareTag("Team2")) {
+            if (!col.CompareTag("Team1") && !col.CompareTag("Team2") && !col.CompareTag("Player")) {
                 continue;
             }
             // then col is enemy agent;

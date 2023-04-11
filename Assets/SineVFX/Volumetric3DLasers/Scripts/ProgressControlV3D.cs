@@ -88,21 +88,6 @@ public class ProgressControlV3D : MonoBehaviour {
             globalImpactProgress += Time.deltaTime * globalImpactProgressSpeed;
         }
 
-        //if (Input.GetMouseButton(0) || always == true)
-        //{
-        //    globalProgress = 0f;
-        //    endPointEffect.emit = true;
-        //}
-        //else
-        //{
-        //    endPointEffect.emit = false;
-        //}
-
-        //if (Input.GetMouseButtonDown(0))
-        //{
-        //    globalImpactProgress = 0f;
-        //}
-
         if (always == true)
         {
             globalProgress = 0f;

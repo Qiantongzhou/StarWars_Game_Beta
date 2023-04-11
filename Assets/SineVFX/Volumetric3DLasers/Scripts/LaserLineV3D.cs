@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class LaserLineV3D : MonoBehaviour
 {
+    private int LaserDamage = 1;
     public float maxLength = 1.0f;
 
     public AnimationCurve shaderProgressCurve;
@@ -40,6 +41,9 @@ public class LaserLineV3D : MonoBehaviour
         psr.material.SetFloat("_FinalSize", finalSize);
     }
 
+
+    private float lastCollisionTime;
+    private float collisionCooldown = 0.1f;
     // Initialize Laser Line
     void LaserCastRay()
     {
@@ -55,6 +59,21 @@ public class LaserLineV3D : MonoBehaviour
             }
             particleSpawnPositions = new Vector3[positionArrayLength];
             endPoint = hit.point;
+
+
+            if (Time.time > lastCollisionTime + collisionCooldown) {
+                // deal dmg
+                GameObject target = hit.collider.gameObject;
+                if (target.layer == LayerMask.NameToLayer("Agent")) {
+                    if (target.tag != "Player") {
+                        target.GetComponent<AgentHealth>().takedamage(LaserDamage);
+                    }
+                    else {
+                        target.GetComponent<player>().takedamage(LaserDamage);
+                    }
+                }
+                lastCollisionTime = Time.time;
+            }
         }
         else
         {

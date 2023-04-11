@@ -11,6 +11,8 @@ public class mothershiphealth : MonoBehaviour
 
     private int currentmagicpoint;
 
+    private float lastCollisionTime;
+    private float collisionCooldown = 2f;
 
     public int damageblock { get; set; }
 
@@ -56,6 +58,14 @@ public class mothershiphealth : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        takedamage(10);
+        // to avoid continus collision
+        if (Time.time > lastCollisionTime + collisionCooldown) {
+            var collisionLayer = collision.collider.gameObject.layer;
+            // if collision is not from missle
+            if (collisionLayer != LayerMask.NameToLayer("Missle")) {
+                takedamage(10);
+            }
+            lastCollisionTime = Time.time;
+        }
     }
 }

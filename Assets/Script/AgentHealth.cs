@@ -8,6 +8,9 @@ public class AgentHealth : MonoBehaviour
     Attributes agentattributes;
     public Canvas healthdisplay;
     private int currenthealth;
+    private float lastCollisionTime;
+    private float collisionCooldown = 2f;
+
 
     private int currentmagicpoint;
 
@@ -43,7 +46,7 @@ public class AgentHealth : MonoBehaviour
     }
     public void takedamage(int dam)
     {
-        print("agenttakedamage: " + dam);
+        print("Agent take damage: " + dam);
         currenthealth -= dam;
         if (currenthealth < 0)
         {
@@ -56,6 +59,14 @@ public class AgentHealth : MonoBehaviour
     }
     private void OnCollisionEnter(Collision collision)
     {
-        takedamage(10);
+        // to avoid continus collision
+        if (Time.time > lastCollisionTime + collisionCooldown) {
+            var collisionLayer = collision.collider.gameObject.layer;
+            // if collision is not from missle
+            if (collisionLayer != LayerMask.NameToLayer("Missle")) {
+                takedamage(10);
+            }
+            lastCollisionTime = Time.time;
+        }
     }
 }

@@ -19,6 +19,8 @@ public class CheckEnemyInProximityNode : ConditionNode {
             float angle = Vector3.Angle(btAgent.transform.forward, btAgent.target.transform.forward);
             if (angle > 160f && distance < evadeDistance) {
                 return NodeStatus.SUCCESS;
+            }else if(distance < 30f) {
+                return NodeStatus.SUCCESS;
             }
             else {
                 return NodeStatus.FAILURE;

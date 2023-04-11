@@ -42,8 +42,6 @@ public class AgentBT : MonoBehaviour {
         seekMovementParalle.AddChild(new ObstacleAvoidanceNode(btAgent, 100f, 30f, speed));
         offensiveSeq.AddChild(seekMovementParalle);
 
-        
-
         // if enemy not in cone but target is set, move towards target
         SequenceNode traceSeq = new SequenceNode();
         traceSeq.AddChild(new AstarMove2TargetNode(btAgent));

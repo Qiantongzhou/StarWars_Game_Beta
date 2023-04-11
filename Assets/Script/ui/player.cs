@@ -16,6 +16,8 @@ public class player : MonoBehaviour
     public Attributes equipAttr;
     public Attributes skillAttr;
     public Attributes ResultAttr;
+    private float lastCollisionTime;
+    private float collisionCooldown = 2f;
 
 
     private int currenthealth;
@@ -191,6 +193,14 @@ public class player : MonoBehaviour
     }*/
     private void OnCollisionEnter(Collision collision)
     {
-        takedamage(5);
+        // to avoid continus collision
+        if (Time.time > lastCollisionTime + collisionCooldown) {
+            var collisionLayer = collision.collider.gameObject.layer;
+            // if collision is not from missle
+            if (collisionLayer != LayerMask.NameToLayer("Missle")) {
+                takedamage(10);
+            }
+            lastCollisionTime = Time.time;
+        }
     }
 }
