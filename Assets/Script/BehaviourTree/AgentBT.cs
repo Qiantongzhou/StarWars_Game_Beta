@@ -15,12 +15,6 @@ public class AgentBT : MonoBehaviour {
     private AgentBT btAgent;
     private SelectorNode root;
 
-    //these code are not supposed to be there, it is just for convenience
-    public float health = 100f;
-    public float maxHealth = 100f;
-    //public float shield = 100f;
-    //public float maxShield = 100f;
-
     private void Start() {
         btAgent = GetComponent<AgentBT>();
         aStarAgent = GetComponent<AStarAgent>();

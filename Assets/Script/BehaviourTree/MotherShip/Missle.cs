@@ -7,6 +7,7 @@ public class Missle : MonoBehaviour
 {
     [HideInInspector] public Transform target;
 
+    public GameObject missleSender;
     public float missleDmg = 10;
     public float frequency;
     public float speed = 100f;
@@ -57,18 +58,22 @@ public class Missle : MonoBehaviour
         Destroy(gameObject);
     }
 
-    private void OnColliderEnter(Collider other) {
-        if(other.gameObject.layer == LayerMask.GetMask("Agent")) {
-            if (other.tag != "Player") {
-                if (other.name != "MotherShip") {
-                    other.GetComponent<AgentBT>().health -= missleDmg;
-                }
-                else {
-                    other.GetComponent<AgentBT>().health -= missleDmg;
-                }
+    public void OnTriggerEnter(Collider other) {
+        //if (other.gameObject.layer == LayerMask.GetMask("Agent")) {
+        //    if (other.tag != "Player") {
+        //        if (other.name != "MotherShip") {
+        //            other.GetComponent<AgentBT>().health -= missleDmg;
+        //        }
+        //        else {
+        //            other.GetComponent<AgentBT>().health -= missleDmg;
+        //        }
+        //    }
+        //}
+        if(missleSender != other.gameObject) {
+            if (!other.CompareTag("Missile")) {
+                Instantiate(effectPrefab, transform.position, transform.rotation);
+                Destroy(gameObject);
             }
         }
-        Instantiate(effectPrefab, transform.position, transform.rotation);
-        Destroy(gameObject);
     }
 }

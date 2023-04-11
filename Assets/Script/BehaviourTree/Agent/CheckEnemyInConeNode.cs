@@ -76,12 +76,7 @@ public class CheckEnemyInConeNode : ConditionNode {
         }
         
         if (closestEnemy != null) {
-            if (closestEnemy.gameObject.CompareTag("Player")) {
-                btAgent.target = closestEnemy.gameObject.transform.parent;
-            }
-            else {
-                btAgent.target = closestEnemy.gameObject.transform.parent.parent;
-            }
+            btAgent.target = closestEnemy.gameObject.transform;
             return true;
         }
 

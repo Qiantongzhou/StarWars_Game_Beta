@@ -25,6 +25,10 @@ public class CheckMissleInAreaNode : ConditionNode {
         if (missle == null) {
             return false;
         }
+        // if it is player's missle
+        if (missle.GetComponent<Missle>() == null) {
+            return true;
+        }
         if (missle.GetComponent<Missle>().target.CompareTag(btAgent.tag)) {
             return true;
         }

@@ -43,7 +43,7 @@ public class mothershiphealth : MonoBehaviour
     }
     public void takedamage(int dam)
     {
-        print("agenttakedamage: " + dam);
+        print("MotherShip taking damage: " + dam);
         currenthealth -= dam;
         if (currenthealth < 0)
         {

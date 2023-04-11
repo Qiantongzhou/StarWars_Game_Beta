@@ -28,7 +28,9 @@ public class FireMissleNode : ActionNode {
         if (msbt != null) {
             foreach (Transform child in msbt.missleLauncher) {
                 GameObject missle = MSBT.Instantiate(msbt.misslePrefab, child.position, child.rotation);
-                missle.GetComponent<Missle>().target = msbt.target;
+                Missle missleComponent = missle.GetComponent<Missle>();
+                missleComponent.target = msbt.target;
+                missleComponent.missleSender = msbt.gameObject;
             }
         }
     }

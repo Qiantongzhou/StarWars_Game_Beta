@@ -33,7 +33,11 @@ public class AttackEnemyNode : ActionNode
     public void Fire() {
         if (btAgent != null) {
             GameObject missle = AgentBT.Instantiate(btAgent.misslePrefab, btAgent.missleLauncher.position, btAgent.missleLauncher.rotation);
-            missle.GetComponent<Missle>().target = btAgent.target;
+            
+            Missle missleComponent = missle.GetComponent<Missle>();
+            missleComponent.target = btAgent.target;
+            missleComponent.missleSender = btAgent.gameObject;
+
         }
     }
 
