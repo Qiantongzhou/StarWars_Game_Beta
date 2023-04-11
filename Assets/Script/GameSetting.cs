@@ -9,7 +9,7 @@ public static class GameSetting
     // standard 10m/s
     public static float maxHealth = 150;
     public static float maxDamage = 15;
-    public static float maxSpeed = 15;
+    public static float maxSpeed = 350;
     public static Dictionary<int, Dictionary<string, float>> plane_info =
         new Dictionary<int, Dictionary<string, float>>() {
             {
@@ -18,6 +18,8 @@ public static class GameSetting
                         { "Health",100f},
                         { "Damage",10f},
                         { "Speed",200f},
+                        { "bulletspeed",700f},
+                        { "firedelay",0.2f }
 
                     }
             },
@@ -26,17 +28,19 @@ public static class GameSetting
                     {
                         { "Health",150f},
                         { "Damage",11f},
-                        { "Speed",120f},
-
+                        { "Speed",150f},
+                        { "bulletspeed",1200f},
+                        { "firedelay",0.3f }
                     }
             },
             {
              2, new Dictionary<string, float>
              {
-                 { "Health",100f},
+                 { "Health",120f},
                  { "Damage",8f},
-                 { "Speed",110f},
-
+                 { "Speed",250f},
+                 { "bulletspeed",900f},
+                 { "firedelay",0.3f }
              }
         },{
          3, new Dictionary<string, float>
@@ -44,7 +48,8 @@ public static class GameSetting
              { "Health",70f},
              { "Damage",15f},
              { "Speed",350f},
-
+             { "bulletspeed",700f},
+             { "firedelay",0.05f }
          } 
     }
 };

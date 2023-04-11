@@ -33,18 +33,25 @@ public class switchcamera : MonoBehaviour
     }
     IEnumerator cinematic()
     {
-        yield return new WaitForSeconds(5f);
-        nextcam();
+        yield return new WaitForSeconds(0.2f);
         dialogs[0].SetActive(true);
-        yield return new WaitForSeconds(5f);
-        nextcam();
+        yield return new WaitForSeconds(3f);
         dialogs[0].SetActive(false);
+        nextcam();
+        yield return new WaitForSeconds(2f);
+        
         dialogs[1].SetActive(true);
         yield return new WaitForSeconds(5f);
         nextcam();
         dialogs[1].SetActive(false);
+        yield return new WaitForSeconds(1f);
+        
+        dialogs[2].SetActive(true);
         yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene("TeamProject");
+        nextcam();
+        dialogs[2].SetActive(false);
+        yield return new WaitForSeconds(3f);
+        nextscene();
     }
     public void nextcam()
     {
@@ -67,5 +74,9 @@ public class switchcamera : MonoBehaviour
         }
         cameras[currentCameraIndex].gameObject.SetActive(true);
         
+    }
+    public void nextscene()
+    {
+        SceneManager.LoadScene("TeamProject");
     }
 }

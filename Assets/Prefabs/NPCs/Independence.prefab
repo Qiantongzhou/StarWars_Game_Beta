@@ -81575,13 +81575,14 @@ MonoBehaviour:
   m_shooting:
     mode2D: 0
     bulletSettings:
-      BulletBarrels: []
-      Bullet: {fileID: 0}
-      BulletSpeed: 300
-      BulletFireDelay: 0.15
+      BulletBarrels:
+      - {fileID: 4630949993823510392}
+      Bullet: {fileID: 1169261860770638, guid: acba20e0ba98c7c49a26f32b5fbb662a, type: 3}
+      BulletSpeed: 600
+      BulletFireDelay: 0.5
       BulletDamage: 15
       BulletLifetime: 7
-      TargetDistance: 300
+      TargetDistance: 700
 --- !u!54 &2150389331991253224
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -86629,7 +86630,7 @@ GameObject:
   - component: {fileID: 7664070152673936105}
   m_Layer: 6
   m_Name: Independence
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

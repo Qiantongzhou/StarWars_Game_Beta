@@ -8,8 +8,14 @@ public class SlotManager : MonoBehaviour
     public SkillManager skillManager;
     public EquipmentManager equipmentManager;
 
-    private void Awake()
+    private void Start()
     {
+        StartCoroutine(getplayer());
+        
+    }
+    IEnumerator getplayer()
+    {
+        yield return new WaitForSeconds(1);
         skillManager = GameObject.FindGameObjectWithTag("Player").GetComponent<SkillManager>();
         equipmentManager = GameObject.FindGameObjectWithTag("Player").GetComponent<EquipmentManager>();
     }

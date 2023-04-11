@@ -135,6 +135,8 @@ public class player : MonoBehaviour
         {
             SpaceshipController controller = transform.GetComponent<SpaceshipController>();
             controller.m_spaceship.SpeedRange = new Vector2(30, ResultAttr.movespeed);
+            controller.m_shooting.bulletSettings.BulletSpeed = GameSetting.plane_info[GameSetting.currentplayerplane]["bulletspeed"];
+            controller.m_shooting.bulletSettings.BulletFireDelay = GameSetting.plane_info[GameSetting.currentplayerplane]["firedelay"];
         }
     }
     public void takedamage(int dam)

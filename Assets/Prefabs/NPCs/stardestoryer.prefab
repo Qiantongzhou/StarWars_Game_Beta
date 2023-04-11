@@ -126,10 +126,11 @@ MonoBehaviour:
   m_shooting:
     mode2D: 0
     bulletSettings:
-      BulletBarrels: []
-      Bullet: {fileID: 0}
+      BulletBarrels:
+      - {fileID: 8875445270362386770}
+      Bullet: {fileID: 1169261860770638, guid: 86f7b7c2f5c959f49b45df5b3358e3dc, type: 3}
       BulletSpeed: 300
-      BulletFireDelay: 0.15
+      BulletFireDelay: 0.4
       BulletDamage: 15
       BulletLifetime: 7
       TargetDistance: 300
@@ -57670,7 +57671,7 @@ GameObject:
   - component: {fileID: 5851202011271376067}
   m_Layer: 6
   m_Name: stardestoryer
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

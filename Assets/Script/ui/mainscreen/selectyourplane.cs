@@ -75,6 +75,6 @@ public class selectyourplane : MonoBehaviour
         GameSetting.currentplayerplane = currentCameraIndex;
         print("you have selected starShip: " + GameSetting.currentplayerplane);
         //change scene here
-        SceneManager.LoadScene("TeamProject");
+        SceneManager.LoadScene("animation");
     }
 }

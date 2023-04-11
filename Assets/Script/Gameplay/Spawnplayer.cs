@@ -6,7 +6,7 @@ public class Spawnplayer : MonoBehaviour
 {
     public GameObject[] player;
     public GameObject parent;
-    private void Start()
+    private void Awake()
     {
         Instantiate(player[GameSetting.currentplayerplane],parent.transform);
     }
