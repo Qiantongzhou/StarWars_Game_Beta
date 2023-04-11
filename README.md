@@ -1,4 +1,5 @@
-# Comp476_TeamProject @2023-W-Comp476
+# Comp476_TeamProject 
+- @2023-W-Comp476
   
 # GAME: ASTEROID WARS
 - Asteroid Wars is an arcade-style shooter game where the player flies a spaceship and battles enemy teams in a deathmatch. The objective is to destroy the enemy team’s spawn point, which is a big mothership and then eliminate all remaining enemies. The competition happens between two teams and the first one to destroy the enemy base wins, the match lasts a limited time, and if both team bases are alive at the end, the team with the most ships kills wins/it’s a tie.
