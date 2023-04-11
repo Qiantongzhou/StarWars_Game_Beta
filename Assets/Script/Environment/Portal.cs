@@ -8,6 +8,7 @@ public class Portal : MonoBehaviour
     private Transform _ship;
     public Transform _destination;
 
+<<<<<<< Updated upstream
     private static bool playerIsOverlapping = false;
 
     private void Start()
@@ -37,6 +38,13 @@ public class Portal : MonoBehaviour
     {
         yield return new WaitForSeconds(4);
         playerIsOverlapping = false;
+=======
+    public AudioSource _source;
+
+    private void Start()
+    {
+        _source = GetComponent<AudioSource>();
+>>>>>>> Stashed changes
     }
 
     private void OnTriggerEnter(Collider other)
@@ -49,11 +57,25 @@ public class Portal : MonoBehaviour
         }
     }
 
+<<<<<<< Updated upstream
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player") || other.CompareTag("Enemy") || other.CompareTag("Ally"))
         {
            
         }
+=======
+    public void teleport() {
+
+        if(_source != null)
+            _source.Play();
+
+        Vector3 portalUp = _destination.transform.up;
+        Vector3 shipForward = _ship.transform.forward;
+        float angle = Vector3.SignedAngle(shipForward, portalUp, Vector3.Cross(portalUp, shipForward));
+
+        _ship.Rotate(Vector3.Cross(portalUp, shipForward), angle);
+        _ship.position = _destination.position + _destination.up * 60f;
+>>>>>>> Stashed changes
     }
 }
