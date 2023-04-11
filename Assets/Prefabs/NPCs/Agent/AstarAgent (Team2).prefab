@@ -217,6 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   healthdisplay: {fileID: 8099942097784232170}
+  playerdieexplosionprefab: {fileID: 130346, guid: ecc90adc9ffd49144b89858e2aed568c, type: 3}
 --- !u!136 &359955945943662327
 CapsuleCollider:
   m_ObjectHideFlags: 0

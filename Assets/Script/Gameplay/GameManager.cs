@@ -19,12 +19,15 @@ public class GameManager : MonoBehaviour
 
     public GameObject tieUI;
 
+    public GameObject playerdieui;
+
     private int currentTime;
     private bool isGameOver = false;
 
     // Start is called before the first frame update
     void Start()
     {
+        playerdieui.gameObject.SetActive(false);
         currentTime = gameTime;
         StartCoroutine(GameTimer());
         Cursor.lockState = CursorLockMode.Confined;
@@ -62,6 +65,10 @@ public class GameManager : MonoBehaviour
         else if (!team2Base.activeSelf)
         {
             EndGame("Team 1");
+        }
+      if(GameObject.FindGameObjectWithTag("Player") == null)
+        {
+            playerdieui.gameObject.SetActive(true);
         }
     }
 

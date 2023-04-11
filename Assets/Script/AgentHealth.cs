@@ -7,6 +7,7 @@ public class AgentHealth : MonoBehaviour
 {
     Attributes agentattributes;
     public Canvas healthdisplay;
+    public GameObject playerdieexplosionprefab;
     private int currenthealth;
     private float lastCollisionTime;
     private float collisionCooldown = 2f;
@@ -51,7 +52,13 @@ public class AgentHealth : MonoBehaviour
         if (currenthealth < 0)
         {
             currenthealth = 0;
+            onplayerdie();
         }
+    }
+    public void onplayerdie()
+    {
+        Instantiate(playerdieexplosionprefab, transform.position, Quaternion.identity);
+        transform.gameObject.SetActive(false);
     }
     public int getcurrenthealth()
     {

@@ -81656,6 +81656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attr: {fileID: 2150389331991253232}
+  playerdieexplosionprefab: {fileID: 130346, guid: ecc90adc9ffd49144b89858e2aed568c, type: 3}
   equipAttr: {fileID: 0}
   skillAttr: {fileID: 0}
   ResultAttr: {fileID: 0}
@@ -86528,7 +86529,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4630949993823510392}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 6.28}
+  m_LocalPosition: {x: -0, y: 1.94, z: 15.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

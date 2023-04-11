@@ -249,6 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attr: {fileID: 2790030257033101018}
+  playerdieexplosionprefab: {fileID: 130346, guid: ecc90adc9ffd49144b89858e2aed568c, type: 3}
   equipAttr: {fileID: 0}
   skillAttr: {fileID: 0}
   ResultAttr: {fileID: 0}

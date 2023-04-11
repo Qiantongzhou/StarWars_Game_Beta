@@ -1,9 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.ConstrainedExecution;
 using TMPro;
-
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,9 +7,12 @@ using UnityEngine.UI;
 public class player : MonoBehaviour
 {
     public Attributes attr;
-
+    public GameObject playerdieexplosionprefab;
+    [HideInInspector]
     public Attributes equipAttr;
+    [HideInInspector]
     public Attributes skillAttr;
+    [HideInInspector]
     public Attributes ResultAttr;
     private float lastCollisionTime;
     private float collisionCooldown = 2f;
@@ -22,7 +20,7 @@ public class player : MonoBehaviour
 
     private int currenthealth;
 
-    private int currentmagicpoint;
+    private int currentarmor;
 
 
     public int damageblock { get; set; }
@@ -53,7 +51,7 @@ public class player : MonoBehaviour
         attr.movespeed =Mathf.FloorToInt(GameSetting.plane_info[GameSetting.currentplayerplane]["Speed"]);
         attr.attackdamage= Mathf.FloorToInt(GameSetting.plane_info[GameSetting.currentplayerplane]["Damage"]);
         attr.healthpoint = Mathf.FloorToInt(GameSetting.plane_info[GameSetting.currentplayerplane]["Health"]);
-        
+        attr.armor = Mathf.FloorToInt(GameSetting.plane_info[GameSetting.currentplayerplane]["armor"]);
         gamesaving = GameObject.Find("gamesaving").GetComponent<gamesaving>();
         canvas = GameObject.FindGameObjectWithTag("screencanvas").GetComponent<Canvas>();
         //attr// = GetComponent<Attributes>();
@@ -67,7 +65,7 @@ public class player : MonoBehaviour
 
 
         currenthealth = ResultAttr.healthpoint;
-        currentmagicpoint = ResultAttr.magicpoint;
+        currentarmor = ResultAttr.armor;
         gold = 0;
     }
 
@@ -82,14 +80,14 @@ public class player : MonoBehaviour
 
 
         float value = (float)getcurrenthealth() / ResultAttr.healthpoint;
-        float magic = (float)getcurrentmagic() / ResultAttr.magicpoint;
+        float magic = (float)getcurrentmagic() / ResultAttr.armor;
 
         Slider[] y = canvas.GetComponentsInChildren<Slider>();
         y[0].value = value;
         y[1].value = magic;
         TMP_Text[] x = canvas.GetComponentsInChildren<TMP_Text>();
         x[4].text ="Health:"+getcurrenthealth() + "/" + ResultAttr.healthpoint;
-        x[6].text = "sheild:"+getcurrentmagic() + "/" + ResultAttr.magicpoint;
+        x[6].text = "sheild:"+getcurrentmagic() + "/" + ResultAttr.armor;
         if (ResultAttr.attackdamagebonus > 0)
         {
             x[5].text ="Damage:"+ ResultAttr.attackdamage.ToString() + "<color=green>+" + ResultAttr.attackdamagebonus.ToString() + "</color>";
@@ -142,11 +140,24 @@ public class player : MonoBehaviour
     public void takedamage(int dam)
     {
         print("playertakedamage: " + dam);
-        currenthealth-=dam;
+        if (currentarmor > 1)
+        {
+            currentarmor -= dam;
+        }
+        else
+        {
+            currenthealth -= dam;
+        }
         if(currenthealth < 0)
         {
             currenthealth = 0;
+            onplayerdie();
         }
+    }
+    public void onplayerdie()
+    {
+        Instantiate(playerdieexplosionprefab, transform.position, Quaternion.identity);
+        transform.gameObject.SetActive(false);
     }
     public int getcurrenthealth()
     {
@@ -154,9 +165,12 @@ public class player : MonoBehaviour
     }
     public int getcurrentmagic()
     {
-        return currentmagicpoint;
+        return currentarmor;
     }
-
+    public void setcurrentmagic(int armor)
+    {
+        currentarmor=armor;
+    }
     public Attributes GetBaseAttributes()
     {
         return attr;

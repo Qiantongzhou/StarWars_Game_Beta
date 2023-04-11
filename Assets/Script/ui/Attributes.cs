@@ -24,7 +24,7 @@ public class Attributes : MonoBehaviour
 
     public int healthregen;
 
-    public int magicpoint;
+    public int armor;
 
 
     public int damageblock;
@@ -48,7 +48,7 @@ public class Attributes : MonoBehaviour
     {
         attr.healthpoint += other.healthpoint;
         attr.healthregen += other.healthregen;
-        attr.magicpoint +=  other.magicpoint;
+        attr.armor +=  other.armor;
         attr.damageblock += other.damageblock;
         attr.attackdamage += other.attackdamage;
         attr.attackdamagebonus += other.attackdamagebonus;
@@ -67,7 +67,7 @@ public class Attributes : MonoBehaviour
     {
         healthpoint = 0;
         healthregen = 0;
-        magicpoint = 0;
+        armor = 0;
         damageblock = 0;
         attackdamage = 0;
         critdamage = 0;
@@ -92,7 +92,7 @@ public class Attributes : MonoBehaviour
                 healthregen += value;
                 break;
             case AttributeName.magicpoint:
-                magicpoint += value;
+                armor += value;
                 break;
             case AttributeName.damageblock:
                 damageblock += value;

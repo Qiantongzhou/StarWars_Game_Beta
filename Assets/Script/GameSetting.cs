@@ -18,6 +18,7 @@ public static class GameSetting
                         { "Health",100f},
                         { "Damage",10f},
                         { "Speed",200f},
+                        {"armor",100f },
                         { "bulletspeed",700f},
                         { "firedelay",0.2f }
 
@@ -29,6 +30,7 @@ public static class GameSetting
                         { "Health",150f},
                         { "Damage",11f},
                         { "Speed",150f},
+                        {"armor",100f },
                         { "bulletspeed",1200f},
                         { "firedelay",0.3f }
                     }
@@ -39,6 +41,7 @@ public static class GameSetting
                  { "Health",120f},
                  { "Damage",8f},
                  { "Speed",250f},
+                 {"armor",100f },
                  { "bulletspeed",900f},
                  { "firedelay",0.3f }
              }
@@ -48,6 +51,7 @@ public static class GameSetting
              { "Health",70f},
              { "Damage",15f},
              { "Speed",350f},
+             {"armor",100f },
              { "bulletspeed",700f},
              { "firedelay",0.05f }
          } 
