@@ -289,8 +289,8 @@ MonoBehaviour:
       - {fileID: 1065334708360949672}
       - {fileID: 8393695860203920740}
       Bullet: {fileID: 1169261860770638, guid: 6a77cc242c19ed6448f7384c04e1f41f, type: 3}
-      BulletSpeed: 300
-      BulletFireDelay: 0.15
+      BulletSpeed: 900
+      BulletFireDelay: 0.01
       BulletDamage: 15
       BulletLifetime: 7
       TargetDistance: 300
@@ -386,7 +386,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthpoint: 100
   healthregen: 0
-  magicpoint: 0
+  armor: 0
   damageblock: 0
   attackdamage: 0
   attackdamagebonus: 0

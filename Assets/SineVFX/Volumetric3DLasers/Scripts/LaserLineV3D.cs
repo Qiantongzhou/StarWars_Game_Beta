@@ -62,14 +62,15 @@ public class LaserLineV3D : MonoBehaviour
 
 
             if (Time.time > lastCollisionTime + collisionCooldown) {
-                // deal dmg
                 GameObject target = hit.collider.gameObject;
                 if (target.layer == LayerMask.NameToLayer("Agent")) {
-                    if (target.tag != "Player") {
-                        target.GetComponent<AgentHealth>().takedamage(LaserDamage);
+                    if (target.tag == "Player") {
+                        if (target.GetComponent<player>().teamBelongsTo != target.tag) {
+                            target.GetComponent<player>().takedamage(LaserDamage);
+                        }
                     }
                     else {
-                        target.GetComponent<player>().takedamage(LaserDamage);
+                        target.GetComponent<AgentHealth>().takedamage(LaserDamage);
                     }
                 }
                 lastCollisionTime = Time.time;

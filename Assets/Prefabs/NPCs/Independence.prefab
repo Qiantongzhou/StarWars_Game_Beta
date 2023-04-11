@@ -81578,8 +81578,8 @@ MonoBehaviour:
       BulletBarrels:
       - {fileID: 4630949993823510392}
       Bullet: {fileID: 1169261860770638, guid: acba20e0ba98c7c49a26f32b5fbb662a, type: 3}
-      BulletSpeed: 600
-      BulletFireDelay: 0.5
+      BulletSpeed: 1800
+      BulletFireDelay: 0.015
       BulletDamage: 15
       BulletLifetime: 7
       TargetDistance: 700
@@ -81675,7 +81675,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthpoint: 100
   healthregen: 0
-  magicpoint: 0
+  armor: 0
   damageblock: 0
   attackdamage: 0
   attackdamagebonus: 0

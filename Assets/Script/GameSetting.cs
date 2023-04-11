@@ -16,11 +16,11 @@ public static class GameSetting
                     0,new Dictionary<string, float>
                     {
                         { "Health",100f},
-                        { "Damage",10f},
+                        { "Damage",1f},
                         { "Speed",200f},
                         {"armor",100f },
-                        { "bulletspeed",700f},
-                        { "firedelay",0.2f }
+                        { "bulletspeed",900f},
+                        { "firedelay",0.08f }
 
                     }
             },
@@ -28,32 +28,32 @@ public static class GameSetting
                     1,new Dictionary<string, float>
                     {
                         { "Health",150f},
-                        { "Damage",11f},
+                        { "Damage",1f},
                         { "Speed",150f},
                         {"armor",100f },
-                        { "bulletspeed",1200f},
-                        { "firedelay",0.3f }
+                        { "bulletspeed",1400f},
+                        { "firedelay",0.12f }
                     }
             },
             {
              2, new Dictionary<string, float>
              {
                  { "Health",120f},
-                 { "Damage",8f},
+                 { "Damage",1f},
                  { "Speed",250f},
                  {"armor",100f },
-                 { "bulletspeed",900f},
-                 { "firedelay",0.3f }
+                 { "bulletspeed",1100f},
+                 { "firedelay",0.12f }
              }
         },{
          3, new Dictionary<string, float>
          {
              { "Health",70f},
-             { "Damage",15f},
+             { "Damage",1f},
              { "Speed",350f},
              {"armor",100f },
-             { "bulletspeed",700f},
-             { "firedelay",0.05f }
+             { "bulletspeed",1700f},
+             { "firedelay",0.2f }
          } 
     }
 };
@@ -70,7 +70,7 @@ public static class GameSetting
             },{
                     1,new Dictionary<string, float>
                     {
-                        { "Health",1000f},
+                        { "Health",5000f},
                         { "Damage",10f},
                         { "Speed",200f},
 

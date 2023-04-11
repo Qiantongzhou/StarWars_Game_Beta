@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,6 +7,7 @@ using UnityEngine.UI;
 
 public class player : MonoBehaviour
 {
+    public String teamBelongsTo = "Team1";
     public Attributes attr;
     public GameObject playerdieexplosionprefab;
     [HideInInspector]

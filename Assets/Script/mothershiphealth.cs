@@ -8,6 +8,7 @@ public class mothershiphealth : MonoBehaviour
     Attributes agentattributes;
     public Canvas healthdisplay;
     private int currenthealth;
+    public GameObject mothershipdieexplosionprefab;
 
     private int currentmagicpoint;
 
@@ -50,12 +51,19 @@ public class mothershiphealth : MonoBehaviour
         if (currenthealth < 0)
         {
             currenthealth = 0;
+            onMotherShipdie();
         }
     }
     public int getcurrenthealth()
     {
         return currenthealth;
     }
+    public void onMotherShipdie() {
+        Instantiate(mothershipdieexplosionprefab, transform.position, Quaternion.identity);
+        transform.gameObject.SetActive(false);
+    }
+
+
     private void OnCollisionEnter(Collision collision)
     {
         // to avoid continus collision

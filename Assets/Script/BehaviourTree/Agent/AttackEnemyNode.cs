@@ -9,13 +9,23 @@ public class AttackEnemyNode : ActionNode
     private float lastExecutedTime = 0f;
     private float executionInterval = 0.1f;
     private bool isFirstExecution = true;
+    private bool isForMotherShip = false;
+    private Transform target;
 
-    public AttackEnemyNode(AgentBT btAgent, GameObject misslePrefab) {
+    public AttackEnemyNode(AgentBT btAgent, GameObject misslePrefab, bool isForMotherShip = false) {
         this.btAgent = btAgent;
+        this.isForMotherShip = isForMotherShip;
     }
 
     public override NodeStatus Execute() {
-        Vector3 directionToTarget = btAgent.target.position - btAgent.transform.position;
+        if(!isForMotherShip) {
+            target = btAgent.target;
+        }
+        else {
+            target = btAgent.motherShipTarget;
+        }
+
+        Vector3 directionToTarget = target.position - btAgent.transform.position;
         float angle = Vector3.Angle(btAgent.transform.forward, directionToTarget);
         if (angle < 30f) {
             if (isFirstExecution) {
@@ -35,7 +45,7 @@ public class AttackEnemyNode : ActionNode
             GameObject missle = AgentBT.Instantiate(btAgent.misslePrefab, btAgent.missleLauncher.position, btAgent.missleLauncher.rotation);
             
             Missle missleComponent = missle.GetComponent<Missle>();
-            missleComponent.target = btAgent.target;
+            missleComponent.target = target;
             missleComponent.missleSender = btAgent.gameObject;
 
         }

@@ -17,13 +17,13 @@ public class TeamAssignment : MonoBehaviour
     {
         if (team == Team.Team1)
         {
-            gameObject.tag = "Team 1";
+            gameObject.tag = "Team1";
             Debug.Log("Assigned to team 1");
         }
         else if (team == Team.Team2)
         {
             // Do something for team 2 assignment
-            gameObject.tag = "Team 2";
+            gameObject.tag = "Team2";
             Debug.Log("Assigned to team 2");
         }
     }

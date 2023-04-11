@@ -70,7 +70,7 @@ public class AgentHealth : MonoBehaviour
         if (Time.time > lastCollisionTime + collisionCooldown) {
             var collisionLayer = collision.collider.gameObject.layer;
             // if collision is not from missle
-            if (collisionLayer != LayerMask.NameToLayer("Missle")) {
+            if (collisionLayer != LayerMask.NameToLayer("Missle") && collision.collider.tag != this.tag) {
                 takedamage(10);
             }
             lastCollisionTime = Time.time;

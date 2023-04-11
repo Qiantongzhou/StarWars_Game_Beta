@@ -51,22 +51,25 @@ public class BulletScript : MonoBehaviour {
             //}
 
 
+            bulletDmg = (int)ship.GetChild(0).GetChild(0).gameObject.GetComponent<SpaceshipController>().m_shooting.bulletSettings.BulletDamage;
             if (col.CompareTag("Missile")) {
                 return;
             }
             if (col.gameObject.layer == LayerMask.NameToLayer("Agent")) {
-
-
                 if (col.tag != "Player") {
-                    if (col.name == "MotherShip") {
-                        col.GetComponent<mothershiphealth>().takedamage(bulletDmg);
-                    }
-                    else {
-                        col.GetComponent<AgentHealth>().takedamage(bulletDmg);
+                    if (col.tag != ship.GetChild(0).GetChild(0).gameObject.GetComponent<player>().teamBelongsTo) {
+                        if (col.name == "MotherShip") {
+                            col.GetComponent<mothershiphealth>().takedamage(bulletDmg);
+                        }
+                        else {
+                            col.GetComponent<AgentHealth>().takedamage(bulletDmg);
+                        }
                     }
                 }
                 else {
-                    col.GetComponent<player>().takedamage(bulletDmg);
+                    if(col.GetComponent<player>().teamBelongsTo != ship.tag) {
+                        col.GetComponent<player>().takedamage(bulletDmg);
+                    }
                 }
             }
 

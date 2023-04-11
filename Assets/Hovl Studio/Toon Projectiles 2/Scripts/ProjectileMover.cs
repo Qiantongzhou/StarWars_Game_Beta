@@ -28,20 +28,38 @@ public class ProjectileMover : MonoBehaviour
             else
             {
                 var flashPsParts = flashInstance.transform.GetChild(0).GetComponent<ParticleSystem>();
-                Destroy(flashInstance, flashPsParts.main.duration);
+                Destroy(flashInstance, flashPs.main.duration);
             }
         }
-        Destroy(gameObject,5);
+        Destroy(gameObject,10);
 	}
 
     void FixedUpdate ()
     {
-		if (speed != 0)
-        {
-            rb.velocity = transform.forward * speed;
-            //transform.position += transform.forward * (speed * Time.deltaTime);         
+        if (speed != 0) {
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, 100f);
+            Transform target = null;
+            float minDistance = Mathf.Infinity;
+            foreach (var hitCollider in hitColliders) {
+                if (hitCollider.gameObject.CompareTag("Team2")) {
+                    float distance = Vector3.Distance(transform.position, hitCollider.gameObject.transform.position);
+                    if (distance < minDistance) {
+                        target = hitCollider.gameObject.transform;
+                        minDistance = distance;
+                    }
+                }
+            }
+            if (target == null) {
+                rb.velocity = transform.forward * speed;
+            }
+            else {
+                Vector3 targetDir = target.position - transform.position;
+                Vector3 newDir = Vector3.RotateTowards(transform.forward, targetDir, 10 * Time.fixedDeltaTime, 0f);
+                transform.rotation = Quaternion.LookRotation(newDir);
+                rb.velocity = transform.forward * speed;
+            }
         }
-	}
+    }
 
     //https ://docs.unity3d.com/ScriptReference/Rigidbody.OnCollisionEnter.html
     void OnCollisionEnter(Collision collision)
@@ -84,5 +102,25 @@ public class ProjectileMover : MonoBehaviour
             }
         }
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter(Collider other) {
+        if (other.CompareTag("Missile")) {
+            return;
+        }
+        if (other.gameObject.layer == LayerMask.NameToLayer("Agent")) {
+            if (other.tag != "Player") {
+                // Warning: This code is just for demo;
+                if (other.tag == "Team2") {
+                    if (other.name == "MotherShip") {
+                        other.GetComponent<mothershiphealth>().takedamage(100);
+                    }
+                    else {
+                        other.GetComponent<AgentHealth>().takedamage(100);
+                    }
+                }
+                Destroy(gameObject);
+            }
+        }
     }
 }

@@ -33,6 +33,11 @@ public class CheckTargetInAreaNode : ConditionNode {
         foreach (Collider col in colliders) {
             if(col.gameObject.name == "MotherShip") { continue; }
             if(col.gameObject.tag == msbt.tag) { continue; }
+            if(col.gameObject.tag == "Player") {
+                if(col.GetComponent<player>().teamBelongsTo == msbt.tag) {
+                    continue;
+                }
+            }
             if (!CheckObstacleBetween(col.gameObject)) {
                 float distance = Vector3.Distance(msbt.transform.position, col.transform.position);
                 if (distance < closestDistance) {

@@ -53,8 +53,14 @@ public class CheckEnemyInConeNode : ConditionNode {
             if (!col.CompareTag("Team1") && !col.CompareTag("Team2") && !col.CompareTag("Player")) {
                 continue;
             }
+            if (col.gameObject.tag == "Player") {
+                if (col.GetComponent<player>().teamBelongsTo == btAgent.tag) {
+                    continue;
+                }
+            }
+
             // then col is enemy agent;
-            
+
             Vector3 directionToTarget = col.transform.position - btAgent.transform.position;
             Vector3 forward = btAgent.transform.forward;
 

@@ -38,7 +38,7 @@ public class AgentBT : MonoBehaviour {
 
         ParallelNode seekMovementParalle = new ParallelNode();
         seekMovementParalle.AddChild(new MoveTowardsTargetNode(btAgent));
-        offensiveSeq.AddChild(new AttackEnemyNode(btAgent, misslePrefab));
+        seekMovementParalle.AddChild(new AttackEnemyNode(btAgent, misslePrefab));
         seekMovementParalle.AddChild(new ObstacleAvoidanceNode(btAgent, 100f, 30f, speed));
         offensiveSeq.AddChild(seekMovementParalle);
 
@@ -47,9 +47,16 @@ public class AgentBT : MonoBehaviour {
         traceSeq.AddChild(new AstarMove2TargetNode(btAgent));
 
         // if no enemy detected, check if mother ship was found
-        //SequenceNode attackMotherShipSeq = new SequenceNode();
-        //attackMotherShipSeq.AddChild(new AstarMove2TargetNode(btAgent));
-        //attack 
+        SequenceNode attackMotherShipSeq = new SequenceNode();
+        attackMotherShipSeq.AddChild(new CheckMotherShipInConeNode(btAgent, 500f));
+        ParallelNode seekMotherShipParalle = new ParallelNode();
+        seekMotherShipParalle.AddChild(new MoveTowardsTargetNode(btAgent, true));
+        seekMotherShipParalle.AddChild(new AttackEnemyNode(btAgent, misslePrefab, true));
+        seekMotherShipParalle.AddChild(new ObstacleAvoidanceNode(btAgent, 100f, 30f, speed));
+        attackMotherShipSeq.AddChild(seekMotherShipParalle);
+
+        SequenceNode traceMotherShipSeq = new SequenceNode();
+        traceMotherShipSeq.AddChild(new AstarMove2TargetNode(btAgent));
 
         // else move Random
         SequenceNode wanderSeq = new SequenceNode();
@@ -60,7 +67,8 @@ public class AgentBT : MonoBehaviour {
         root.AddChild(proximityConflictEvasionSeq);
         root.AddChild(offensiveSeq);
         root.AddChild(traceSeq);
-        //root.AddChild(attackMotherShipSeq);
+        root.AddChild(attackMotherShipSeq);
+        root.AddChild(traceMotherShipSeq);
         root.AddChild(wanderSeq);
     }
 
