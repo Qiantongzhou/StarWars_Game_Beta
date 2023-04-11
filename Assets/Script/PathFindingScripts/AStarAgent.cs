@@ -311,6 +311,7 @@ public class AStarAgent : MonoBehaviour
 
         while (Status == AStarAgentStatus.RePath)
         {
+            Vector3 targetPosition = _endPosition != null ? _endPosition : transform.position + Vector3.forward * 10f;
             Status = Pathfinding(_endPosition);
             if (Status == AStarAgentStatus.Invalid)
             {

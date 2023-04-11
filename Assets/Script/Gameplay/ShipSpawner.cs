@@ -8,6 +8,7 @@ public class ShipSpawner : MonoBehaviour
     public List<Transform> spawnPoints;
 
     private List<GameObject> spawnedObjects = new List<GameObject>();
+    private Dictionary<int, float> timers;
 
     // Start is called before the first frame update
     void Start()
@@ -16,6 +17,7 @@ public class ShipSpawner : MonoBehaviour
         {
             SpawnShip(t);
         }
+        timers = new Dictionary<int, float>();
     }
 
     void SpawnShip(Transform spawnpoint)
@@ -30,10 +32,24 @@ public class ShipSpawner : MonoBehaviour
     {
         for (int i = spawnedObjects.Count - 1; i >= 0; i--)
         {
-            if (spawnedObjects[i] == null)
-            {
-                spawnedObjects.RemoveAt(i);
-                SpawnShip(spawnPoints[Random.Range(0, spawnPoints.Count)]);
+            // if not activated
+            if (!spawnedObjects[i].activeSelf) {
+                // if not in timers, add timers
+                if (!timers.ContainsKey(i)) {
+                    timers[i] = Time.time + 20f;
+                }
+                // if in timers, check if time is up
+                else if (Time.time >= timers[i]) {
+                    spawnedObjects.RemoveAt(i);
+                    SpawnShip(spawnPoints[Random.Range(0, spawnPoints.Count)]);
+                    timers.Remove(i);
+                }
+            }
+            // if activated, remove timers
+            else {
+                if (timers.ContainsKey(i)) {
+                    timers.Remove(i);
+                }
             }
         }
     }

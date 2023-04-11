@@ -74,6 +74,9 @@ public class AgentBT : MonoBehaviour {
 
     // Update is called once per frame
     void FixedUpdate() {
+        if(target != null && target.gameObject.activeSelf) {
+            target = null;
+        }
         root.Execute();
     }
 }

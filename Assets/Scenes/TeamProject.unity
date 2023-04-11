@@ -19688,6 +19688,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300550, guid: bb375fe2672dfa24a9df2435ef097756, type: 3}
+--- !u!4 &1161089416 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8937353257381782862, guid: e11785caa7423e244837131d51c0a9e2, type: 3}
+  m_PrefabInstance: {fileID: 8937353255660141335}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1164305953 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 119956, guid: 5b84c93d85043144c991880024f2339f, type: 3}
@@ -27400,6 +27405,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5b84c93d85043144c991880024f2339f, type: 3}
+--- !u!4 &1356860971 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8937353255721974288, guid: e11785caa7423e244837131d51c0a9e2, type: 3}
+  m_PrefabInstance: {fileID: 8937353255660141335}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1357409556 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 128644, guid: 5b84c93d85043144c991880024f2339f, type: 3}
@@ -27709,6 +27719,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300444, guid: bb375fe2672dfa24a9df2435ef097756, type: 3}
+--- !u!4 &1382002451 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8937353256076860447, guid: e11785caa7423e244837131d51c0a9e2, type: 3}
+  m_PrefabInstance: {fileID: 8937353255660141335}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1390318832 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 172978, guid: 5b84c93d85043144c991880024f2339f, type: 3}
@@ -58055,20 +58070,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8937353256506789516, guid: e11785caa7423e244837131d51c0a9e2, type: 3}
       propertyPath: spawnPoints.Array.size
-      value: 0
+      value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 8937353256506789516, guid: e11785caa7423e244837131d51c0a9e2, type: 3}
+      propertyPath: spawnPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 104581717}
     - target: {fileID: 8937353256506789516, guid: e11785caa7423e244837131d51c0a9e2, type: 3}
       propertyPath: spawnPoints.Array.data[1]
       value: 
-      objectReference: {fileID: 104581717}
+      objectReference: {fileID: 1356860971}
     - target: {fileID: 8937353256506789516, guid: e11785caa7423e244837131d51c0a9e2, type: 3}
       propertyPath: spawnPoints.Array.data[2]
       value: 
-      objectReference: {fileID: 104581717}
+      objectReference: {fileID: 1382002451}
     - target: {fileID: 8937353256506789516, guid: e11785caa7423e244837131d51c0a9e2, type: 3}
       propertyPath: spawnPoints.Array.data[3]
       value: 
-      objectReference: {fileID: 104581717}
+      objectReference: {fileID: 1161089416}
     - target: {fileID: 8937353256760636219, guid: e11785caa7423e244837131d51c0a9e2, type: 3}
       propertyPath: mothershipdieexplosionprefab
       value: 
