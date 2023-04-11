@@ -6802,6 +6802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _destination: {fileID: 1554510768}
+  _source: {fileID: 0}
 --- !u!65 &265713884
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -105534,6 +105535,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _destination: {fileID: 1554510768}
+  _source: {fileID: 0}
 --- !u!1 &2652991036055890328
 GameObject:
   m_ObjectHideFlags: 0

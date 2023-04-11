@@ -1,15 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour
 {
     public static SoundManager instance;
 
     [SerializeField] private AudioSource _musicSource, _effectsSource;
+
+    [SerializeField] private AudioClip _menuMusic, _gameMusic;
+
+    Scene currentScene;
     
     void Awake()
     {
+        currentScene = SceneManager.GetActiveScene();
+
         if(instance == null)
         {
             instance = this;
@@ -20,6 +27,14 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
 
+        if(currentScene.name == "TeamProject")
+        {
+            _musicSource.clip = _gameMusic;
+        }
+        else
+        {
+            _musicSource.clip = _menuMusic;
+        }
 
     }
 
