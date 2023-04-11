@@ -44,7 +44,7 @@ public class switchcamera : MonoBehaviour
         nextcam();
         dialogs[1].SetActive(false);
         yield return new WaitForSeconds(5f);
-        SceneManager.LoadScene("mainscreen");
+        SceneManager.LoadScene("TeamProject");
     }
     public void nextcam()
     {
